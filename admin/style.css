@@ -41,7 +41,7 @@
 .sidebar .nav-links li{
   position: relative;
   list-style: none;
-  height: 45px;
+  height: 48px;
   padding-bottom: -0.4em;
 }
 .sidebar .nav-links li a{
@@ -50,7 +50,6 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  transition: all 0.4s ease;
   color: black;
   border-bottom: 1px solid #adabab;
   padding-bottom: -0.7em;
@@ -64,7 +63,9 @@
   border-bottom: 2px solid #700FDC;
 }
 .sidebar .nav-links li a:hover{
-  background: #700FDC;
+  color: #700FDC;
+  border: none;
+  border-bottom: 2px solid #700FDC;
 }
 .sidebar .nav-links li i{
   min-width: 60px;
@@ -133,11 +134,11 @@ nav .sidebar-button i{
 }
 nav .search-box input{
   height: 100%;
-  width: 100%;
+  width: 70%;
   outline: none;
   background: #F5F6FA;
   border: 2px solid #EFEEF1;
-  border-radius: 6px;
+  border-radius: 30px;
   font-size: 18px;
   padding: 0 15px;
 }
@@ -145,8 +146,8 @@ nav .search-box .bx-search{
   position: absolute;
   height: 40px;
   width: 40px;
-  background: #2697FF;
-  right: 5px;
+  background: #700FDC;
+  right: 173px;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 4px;
@@ -155,22 +156,23 @@ nav .search-box .bx-search{
   color: #fff;
   font-size: 22px;
   transition: all 0.4 ease;
+  border-radius: 20px;
 }
 .home-section nav .profile-details{
   display: flex;
   align-items: center;
   background: #F5F6FA;
   border: 2px solid #EFEEF1;
-  border-radius: 6px;
+  border-radius: 50%;
   height: 50px;
-  min-width: 190px;
-  padding: 0 15px 0 2px;
+  min-width: 30px;
+  padding: 0 2px 0 2px;
 }
 nav .profile-details img{
   height: 40px;
   width: 40px;
-  border-radius: 6px;
   object-fit: cover;
+  border-radius: 50%;
 }
 nav .profile-details .admin_name{
   font-size: 15px;
