@@ -5,204 +5,16 @@
     <meta charset="UTF-8" />
     <title>Responsiive Admin Dashboard | CodingLab</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="more.css">
     <!-- Boxicons CDN Link -->
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
   </head>
 
-  <style>
-    /* General container styling */
-.transactions {
-  font-family: Arial, sans-serif;
-  background: #fff;
-  border-radius: 10px;
-  padding: 4px;
-  width: 100%;
-  max-width: 700px;
-  margin: 5px auto;
-}
-
-/* Header styling */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.header h2 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin: 0;
-}
-
-.header .date-filter {
-  display: flex;
-  align-items: center;
-}
-
-.header span {
-  font-size: 0.9rem;
-  margin-right: 5px;
-  color: #777;
-}
-
-.header select {
-  border: 1px solid #ccc;
-  padding: 5px 10px;
-  border-radius: 5px;
-  outline: none;
-}
-
-/* Table styling */
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  text-align: left;
-  padding: 10px;
-}
-
-th {
-  color: #999;
-  font-size: 0.9rem;
-  font-weight: normal;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-tbody td {
-  color: #333;
-  font-size: 0.95rem;
-}
-
-.status {
-  padding: 5px 10px;
-  border-radius: 12px;
-  font-size: 0.8rem;
-  font-weight: bold;
-}
-
-.status.done {
-  background: #e8fdeb;
-  color: #27ae60;
-}
-
-.status.pending {
-  background: #fff5e6;
-  color: #f39c12;
-}
-
-.status.failed {
-  background: #fdecec;
-  color: #e74c3c;
-}
-
-/* Container styling */
-.top-products {
-  font-family: Arial, sans-serif;
-  background: #fff;
-  border-radius: 10px;
-  padding: 4px;
-  width: 100%;
-  max-width: 800px;
-  margin: 10px auto;
-}
-
-/* Header styling */
-.top-products-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.top-products-header h2 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin: 0;
-}
-
-.top-products-header .filter {
-  display: flex;
-  align-items: center;
-}
-
-.top-products-header span {
-  font-size: 0.9rem;
-  margin-right: 5px;
-  color: #777;
-}
-
-.top-products-header select {
-  border: 1px solid #ccc;
-  padding: 5px 10px;
-  border-radius: 5px;
-  outline: none;
-}
-
-/* Table styling */
-.products-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.products-table th, .products-table td {
-  text-align: left;
-  padding: 10px;
-}
-
-.products-table th {
-  color: #999;
-  font-size: 0.9rem;
-  font-weight: normal;
-}
-
-.products-table tr {
-  border-bottom: 1px solid #f2f2f2;
-}
-
-.products-table tr:last-child {
-  border-bottom: none;
-}
-
-.products-table td {
-  font-size: 0.95rem;
-  color: #333;
-}
-
-.product-info {
-  display: flex;
-  align-items: center;
-}
-
-.product-info img {
-  width: 40px;
-  height: 40px;
-  border-radius: 5px;
-  margin-right: 10px;
-}
-
-.product-info strong {
-  font-weight: bold;
-}
-
-.product-info small {
-  color: #999;
-  font-size: 0.8rem;
-}
-
-.price {
-  color: #3498db;
-  font-weight: bold;
-}
-
-
-  </style>
 
   <body>
     <div class="sidebar">
@@ -268,104 +80,71 @@ tbody td {
         <div class="overview-boxes">
           <div class="box">
             <div class="right-side">
-              <div class="box-topic">Total Order</div>
-              <div class="number">40,876</div>
+              <div class="box-topic"><small><i class="bx bx-cart-alt" style="color:white; background: #83AD7D; border-radius: 50%; padding: 0.4em; font-size: 12px;"></i> Revenue</small></div>
+              <div class="number">$166,580</div>
               <div class="indicator">
-                <i class="bx bx-up-arrow-alt"></i>
-                <span class="text">Up from yesterday</span>
+                <i class="bx bx-up-arrow-alt" style="background: #83AD7D;"></i>
+                <span class="text" style="font-size: 16px;"> <span style="color: #83AD7D;">5% </span> in the last 1 month</span>
               </div>
             </div>
-            <i class="bx bx-cart-alt cart"></i>
+            <i class="bx bx-cart-alt cart" style="color: white; background: white;"></i>
           </div>
+      
+       
           <div class="box">
             <div class="right-side">
-              <div class="box-topic">Total Sales</div>
-              <div class="number">38,876</div>
+              <div class="box-topic"><small><i class="bx bx-cart-alt" style="color:white; background: rgb(246, 114, 90); border-radius: 50%; padding: 0.4em; font-size: 12px;"></i> Product Sold</small></div>
+              <div class="number">5,679</div>
               <div class="indicator">
-                <i class="bx bx-up-arrow-alt"></i>
-                <span class="text">Up from yesterday</span>
+                <i class="bx bx-up-arrow-alt" style="background: #83AD7D;"></i>
+                <span class="text" style="font-size: 16px;"> <span style="color: #83AD7D;">2% </span> in the last 1 month</span>
               </div>
             </div>
-            <i class="bx bxs-cart-add cart two"></i>
+            <i class="bx bx-cart-alt cart" style="color: white; background: white;"></i>
           </div>
+
+
+
           <div class="box">
             <div class="right-side">
-              <div class="box-topic">Total Profit</div>
-              <div class="number">$12,876</div>
+              <div class="box-topic"><small><i class="bx bx-cart-alt" style="color:white; background: #7758B5; border-radius: 50%; padding: 0.4em; font-size: 12px;"></i> Customer</small></div>
+              <div class="number">51,801</div>
               <div class="indicator">
-                <i class="bx bx-up-arrow-alt"></i>
-                <span class="text">Up from yesterday</span>
+                <i class="bx bx-down-arrow-alt" style="background:  rgb(246, 114, 90);"></i>
+                <span class="text" style="font-size: 16px;"> <span style="color:  rgb(246, 114, 90);">3% </span> in the last 1 month</span>
               </div>
             </div>
-            <i class="bx bx-cart cart three"></i>
+            <i class="bx bx-cart-alt cart" style="color: white; background: white;"></i>
           </div>
-          <div class="box">
-            <div class="right-side">
-              <div class="box-topic">Total Return</div>
-              <div class="number">11,086</div>
-              <div class="indicator">
-                <i class="bx bx-down-arrow-alt down"></i>
-                <span class="text">Down From Today</span>
-              </div>
-            </div>
-            <i class="bx bxs-cart-download cart four"></i>
-          </div>
+
+
+
+         
+      
         </div>
 
         <div class="sales-boxes">
           <div class="recent-sales box">
-            <div class="title">Recent Sales</div>
-            <div class="sales-details">
-              <ul class="details">
-                <li class="topic">Date</li>
-                <li><a href="#">02 Jan 2021</a></li>
-                <li><a href="#">02 Jan 2021</a></li>
-                <li><a href="#">02 Jan 2021</a></li>
-                <li><a href="#">02 Jan 2021</a></li>
-                <li><a href="#">02 Jan 2021</a></li>
-                <li><a href="#">02 Jan 2021</a></li>
-                <li><a href="#">02 Jan 2021</a></li>
-              </ul>
-              <ul class="details">
-                <li class="topic">Customer</li>
-                <li><a href="#">Alex Doe</a></li>
-                <li><a href="#">David Mart</a></li>
-                <li><a href="#">Roe Parter</a></li>
-                <li><a href="#">Diana Penty</a></li>
-                <li><a href="#">Martin Paw</a></li>
-                <li><a href="#">Doe Alex</a></li>
-                <li><a href="#">Aiana Lexa</a></li>
-                <li><a href="#">Rexel Mags</a></li>
-                <li><a href="#">Tiana Loths</a></li>
-              </ul>
-              <ul class="details">
-                <li class="topic">Sales</li>
-                <li><a href="#">Delivered</a></li>
-                <li><a href="#">Pending</a></li>
-                <li><a href="#">Returned</a></li>
-                <li><a href="#">Delivered</a></li>
-                <li><a href="#">Pending</a></li>
-                <li><a href="#">Returned</a></li>
-                <li><a href="#">Delivered</a></li>
-                <li><a href="#">Pending</a></li>
-                <li><a href="#">Delivered</a></li>
-              </ul>
-              <ul class="details">
-                <li class="topic">Total</li>
-                <li><a href="#">$204.98</a></li>
-                <li><a href="#">$24.55</a></li>
-                <li><a href="#">$25.88</a></li>
-                <li><a href="#">$170.66</a></li>
-                <li><a href="#">$56.56</a></li>
-                <li><a href="#">$44.95</a></li>
-                <li><a href="#">$67.33</a></li>
-                <li><a href="#">$23.53</a></li>
-                <li><a href="#">$46.52</a></li>
-              </ul>
-            </div>
-            <div class="button">
-              <a href="#">See All</a>
-            </div>
+            <div class="sales-data">
+              <div class="sales-header">
+                <h2>Sales Data</h2>
+                <a href="#" class="detail-link">Detail</a>
+              </div>
+              <div id="nogo">
+              <canvas id="salesChart"></canvas>
+              <div class="chart-legend">
+                <div>
+                  <span class="legend-dot this-month"></span>
+                  <span><small></small>This month</span>
+                </div>
+                <div>
+                  <span class="legend-dot prev-month"></span>
+                  <span>Prev month</span>
+                </div>
+              </div>
+
+              </div>
+            </div>            
           </div>
           <div class="top-sales box">
             
@@ -374,7 +153,7 @@ tbody td {
               <div class="top-products-header">
                 <h2>Top Products</h2>
                 <div class="filter">
-                  <span>This Month</span>
+                  <span></span>
                   <select>
                     <option>This Month</option>
                   </select>
@@ -393,7 +172,7 @@ tbody td {
                   <tr>
                     <td>1</td>
                     <td class="product-info">
-                      <img src="https://via.placeholder.com/40" alt="Youth Tshirt">
+                      <img src="images/top.png" alt="Youth Tshirt">
                       <div>
                         <strong>Youth Tshirt</strong><br>
                         <small>Levis</small>
@@ -405,7 +184,19 @@ tbody td {
                   <tr>
                     <td>2</td>
                     <td class="product-info">
-                      <img src="https://via.placeholder.com/40" alt="Adult Tshirt">
+                      <img src="images/top.png" alt="Adult Tshirt">
+                      <div>
+                        <strong>Adult Tshirt</strong><br>
+                        <small>Champion</small>
+                      </div>
+                    </td>
+                    <td class="price">$55</td>
+                    <td>367 pcs</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td class="product-info">
+                      <img src="images/top.png" alt="Adult Tshirt">
                       <div>
                         <strong>Adult Tshirt</strong><br>
                         <small>Champion</small>
@@ -435,7 +226,7 @@ tbody td {
               <div class="header">
                 <h2>Latest Transactions</h2>
                 <div class="date-filter">
-                  <span>Today</span>
+                  <span></span>
                   <select>
                     <option>Today</option>
                   </select>
@@ -480,6 +271,20 @@ tbody td {
                     <td>1 pc</td>
                     <td><span class="status done">Done</span></td>
                   </tr>
+                  <tr>
+                    <td>Eleanor Pena</td>
+                    <td>Hoodie</td>
+                    <td>Levis</td>
+                    <td>1 pc</td>
+                    <td><span class="status done">Done</span></td>
+                  </tr>
+                  <tr>
+                    <td>Wade Warren</td>
+                    <td>Hoodie</td>
+                    <td>Levis</td>
+                    <td>2 pcs</td>
+                    <td><span class="status pending">Pending</span></td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -489,66 +294,19 @@ tbody td {
 
           </div>
           <div class="top-sales box">
-            <div class="title">Top Seling Product</div>
-            <ul class="top-sales-details">
-              <li>
-                <a href="#">
-                  <img src="images/sunglasses.jpg" alt="" />
-                  <span class="product">Vuitton Sunglasses</span>
-                </a>
-                <span class="price">$1107</span>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="images/jeans.jpg" alt="" />
-                  <span class="product">Hourglass Jeans </span>
-                </a>
-                <span class="price">$1567</span>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="images/nike-min.jpg" alt="" />
-                  <span class="product">Nike Sport Shoe</span>
-                </a>
-                <span class="price">$1234</span>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="images/scarves.jpg" alt="" />
-                  <span class="product">Hermes Silk Scarves.</span>
-                </a>
-                <span class="price">$2312</span>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="images/blueBag.jpg" alt="" />
-                  <span class="product">Succi Ladies Bag</span>
-                </a>
-                <span class="price">$1456</span>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="images/bag.jpg" alt="" />
-                  <span class="product">Gucci Womens's Bags</span>
-                </a>
-                <span class="price">$2345</span>
-              </li>
-
-              <li>
-                <a href="#">
-                  <img src="images/addidas.jpg" alt="" />
-                  <span class="product">Addidas Running Shoe</span>
-                </a>
-                <span class="price">$2345</span>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="images/shirt.jpg" alt="" />
-                  <span class="product">Bilack Wear's Shirt</span>
-                </a>
-                <span class="price">$1245</span>
-              </li>
-            </ul>
+            <div class="world-map-container">
+              <div class="header">
+                <h2>Latest Transactions</h2>
+                <div class="date-filter">
+                  <span></span>
+                  <select>
+                    <option>Country</option>
+                  </select>
+                </div>
+              </div>
+              <div id="worldMap"></div>
+            </div>
+            
           </div>
         </div>
 
@@ -558,6 +316,109 @@ tbody td {
 
       </div>
     </section>
+
+
+
+
+    <script>
+      // Initialize the map
+      const map = L.map("worldMap").setView([2, 0], 1); // Centered on the world
+    
+      // Add OpenStreetMap tiles (base layer)
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      }).addTo(map);
+    
+      // Example of adding markers for specific locations
+      const locations = [
+        { name: "New York, USA", coords: [40.7128, -74.006] },
+        { name: "London, UK", coords: [51.5074, -0.1278] },
+        { name: "Tokyo, Japan", coords: [35.6895, 139.6917] },
+        { name: "Sydney, Australia", coords: [-33.8688, 151.2093] },
+      ];
+    
+      // Loop through locations and add markers
+      locations.forEach((location) => {
+        L.marker(location.coords)
+          .addTo(map)
+          .bindPopup(`<b>${location.name}</b>`) // Add popups for locations
+          .openPopup();
+      });
+    </script>
+    
+
+
+
+
+    <script>
+      const ctx = document.getElementById("salesChart").getContext("2d");
+    
+      const salesChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+          datasets: [
+            {
+              label: "This month",
+              data: [2200, 1300, 2300, 1700, 800, 1900, 2200],
+              backgroundColor: "#3b82f6",
+              borderRadius: 5,
+              barThickness: 20,
+            },
+            {
+              label: "Prev month",
+              data: [1000, 1100, 1500, 1700, 600, 800, 2000],
+              backgroundColor: "#222",
+              borderRadius: 5,
+              barThickness: 20,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: {
+                stepSize: 500,
+                color: "#999",
+              },
+              grid: {
+                color: "#f2f2f2",
+              },
+            },
+            x: {
+              ticks: {
+                color: "#333",
+              },
+              grid: {
+                display: false,
+              },
+            },
+          },
+          plugins: {
+            legend: {
+              display: false, /* Hide default legend */
+            },
+            tooltip: {
+              backgroundColor: "#fff",
+              titleColor: "#333",
+              bodyColor: "#000",
+              borderColor: "#ddd",
+              borderWidth: 1,
+              padding: 10,
+              callbacks: {
+                label: function (context) {
+                  return `Revenue: $${context.raw}`;
+                },
+              },
+            },
+          },
+        },
+      });
+    </script>
+    
 
     <script>
       let sidebar = document.querySelector(".sidebar");
