@@ -9,6 +9,201 @@
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
+
+  <style>
+    /* General container styling */
+.transactions {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  border-radius: 10px;
+  padding: 4px;
+  width: 100%;
+  max-width: 700px;
+  margin: 5px auto;
+}
+
+/* Header styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.header .date-filter {
+  display: flex;
+  align-items: center;
+}
+
+.header span {
+  font-size: 0.9rem;
+  margin-right: 5px;
+  color: #777;
+}
+
+.header select {
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px;
+}
+
+th {
+  color: #999;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody td {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status.done {
+  background: #e8fdeb;
+  color: #27ae60;
+}
+
+.status.pending {
+  background: #fff5e6;
+  color: #f39c12;
+}
+
+.status.failed {
+  background: #fdecec;
+  color: #e74c3c;
+}
+
+/* Container styling */
+.top-products {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  border-radius: 10px;
+  padding: 4px;
+  width: 100%;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+/* Header styling */
+.top-products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.top-products-header h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.top-products-header .filter {
+  display: flex;
+  align-items: center;
+}
+
+.top-products-header span {
+  font-size: 0.9rem;
+  margin-right: 5px;
+  color: #777;
+}
+
+.top-products-header select {
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Table styling */
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.products-table th, .products-table td {
+  text-align: left;
+  padding: 10px;
+}
+
+.products-table th {
+  color: #999;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.products-table tr {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.products-table tr:last-child {
+  border-bottom: none;
+}
+
+.products-table td {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+}
+
+.product-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.product-info strong {
+  font-weight: bold;
+}
+
+.product-info small {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+.price {
+  color: #3498db;
+  font-weight: bold;
+}
+
+
+  </style>
+
   <body>
     <div class="sidebar">
       <div class="logo-details">
@@ -173,6 +368,127 @@
             </div>
           </div>
           <div class="top-sales box">
+            
+            
+            <div class="top-products">
+              <div class="top-products-header">
+                <h2>Top Products</h2>
+                <div class="filter">
+                  <span>This Month</span>
+                  <select>
+                    <option>This Month</option>
+                  </select>
+                </div>
+              </div>
+              <table class="products-table">
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Item Sold</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td class="product-info">
+                      <img src="https://via.placeholder.com/40" alt="Youth Tshirt">
+                      <div>
+                        <strong>Youth Tshirt</strong><br>
+                        <small>Levis</small>
+                      </div>
+                    </td>
+                    <td class="price">$35</td>
+                    <td>498 pcs</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td class="product-info">
+                      <img src="https://via.placeholder.com/40" alt="Adult Tshirt">
+                      <div>
+                        <strong>Adult Tshirt</strong><br>
+                        <small>Champion</small>
+                      </div>
+                    </td>
+                    <td class="price">$55</td>
+                    <td>367 pcs</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+
+          
+          </div>
+        </div>
+
+      
+<br>
+
+        <div class="sales-boxes">
+          <div class="recent-sales box">
+          
+
+
+            <div class="transactions">
+              <div class="header">
+                <h2>Latest Transactions</h2>
+                <div class="date-filter">
+                  <span>Today</span>
+                  <select>
+                    <option>Today</option>
+                  </select>
+                </div>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Customer</th>
+                    <th>Product</th>
+                    <th>Brand</th>
+                    <th>Qty</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Eleanor Pena</td>
+                    <td>Hoodie</td>
+                    <td>Levis</td>
+                    <td>1 pc</td>
+                    <td><span class="status done">Done</span></td>
+                  </tr>
+                  <tr>
+                    <td>Wade Warren</td>
+                    <td>Hoodie</td>
+                    <td>Levis</td>
+                    <td>2 pcs</td>
+                    <td><span class="status pending">Pending</span></td>
+                  </tr>
+                  <tr>
+                    <td>Brooklyn Simmons</td>
+                    <td>Adult Tshirt</td>
+                    <td>Champion</td>
+                    <td>1 pc</td>
+                    <td><span class="status failed">Failed</span></td>
+                  </tr>
+                  <tr>
+                    <td>Kathryn Murphy</td>
+                    <td>Youth Tshirt</td>
+                    <td>Pull & Bear</td>
+                    <td>1 pc</td>
+                    <td><span class="status done">Done</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+
+
+
+          </div>
+          <div class="top-sales box">
             <div class="title">Top Seling Product</div>
             <ul class="top-sales-details">
               <li>
@@ -235,6 +551,11 @@
             </ul>
           </div>
         </div>
+
+
+
+
+
       </div>
     </section>
 
