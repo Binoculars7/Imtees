@@ -1,0 +1,224 @@
+/* Product Form Styling */
+.product-form {
+  width: 100%;
+  max-width: 800px;
+  margin: 5px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 4px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.section label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.section input,
+.section select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* Media Section Styling */
+.media-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+#media-infos{
+  text-align: center;
+}
+.reshape{
+  background-color: #F9F9FC;
+  border: 2px dashed #ddd;
+  padding: 2em 0;
+}
+.media-item {
+  width: 60px;
+  height: 60px;
+  background-color: #eee;
+  border: 2px dashed #ddd;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.media-item.selected {
+  background-color: #f3e8fd;
+  border-color: #9b59b6;
+}
+
+.media-item.selected::after {
+  content: "✔";
+  font-size: 12px;
+  color: #fff;
+  background-color: #9b59b6;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-image-btn {
+  padding: 10px 20px;
+  background-color: #D8B5FF;
+  color: #700FDC;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-image-btn:hover {
+  background-color: #8e44ad;
+  color: white;
+}
+
+/* Pricing Section Styling */
+.pricing-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.pricing-row label {
+  flex: 1;
+}
+
+.pricing-row input,
+.pricing-row select {
+  flex: 2.5;
+  padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.unique-container {
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 4px;
+  border-radius: 8px;
+}
+.toinvent{
+  display: flex;
+}
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+
+}
+#input-groups{
+    width: 32%;
+    margin-left: 0.5em;
+}
+.input-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+#varto{
+  width: 45%;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.variation-section {
+  margin-top: 20px;
+}
+
+.variation-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.variation-group .delete-variation {
+  background: #F57E771F;
+  color: #CC5F5F;
+  border: none;
+  padding: 0 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.add-variant {
+  display: block;
+  background: #D8B5FF;
+  color: #700FDC;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: -10px;
+}
+
+.shipping-section {
+  margin-top: 20px;
+}
+
+.physical-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.dimensions-group {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
