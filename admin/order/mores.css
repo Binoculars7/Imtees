@@ -1,0 +1,221 @@
+/* Wrapper for the table */
+.order-table-wrapper {
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* Table styling */
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+.order-table thead {
+  background-color: #f9f9f9;
+}
+
+.order-table th, 
+.order-table td {
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.order-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Profit styling */
+.profit-percentage {
+  background: #9efa92ad;
+  padding: 0.3em;
+  color: green;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+/* Status badges */
+.status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.status.pending {
+  background-color: #FFC600;
+  color: #FFC600;
+}
+
+.status.confirmed {
+  background-color: #28C76F;
+  color: #28C76F;
+}
+
+.status.processing {
+  background-color: #0FB7FF;
+  color: #0FB7FF;
+}
+
+
+
+
+
+
+
+
+
+
+/* Pagination container */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Pagination info (rows dropdown and total count) */
+.pagination-info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.rows-select {
+  padding: 5px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* Pagination buttons */
+.pagination-buttons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pagination-btn {
+  padding: 5px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.pagination-btn.active {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.pagination-btn:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+/* Order Management Container */
+.order-management {
+  padding: 20px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+/* Header Section */
+.order-header h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Tabs Section */
+.order-tabs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.order-tab {
+  padding: 10px 20px;
+  border: none;
+  background-color: transparent;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+.order-tab:hover,
+.order-tab.active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+/* Actions Section */
+.order-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Search Box */
+.search-boxk {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.search-boxk input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+}
+
+.search-boxk button {
+  background: transparent;
+  border: none;
+  color: #888;
+  cursor: pointer;
+}
+
+/* Filter Dropdown */
+.filter-dropdown select {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+}
