@@ -23,7 +23,7 @@
       </div>
       <ul class="nav-links">
         <li>
-          <a href="#" class="active">
+          <a href="#">
             <i class="bx bx-grid-alt"></i>
             <span class="links_name">Dashboard</span>
           </a>
@@ -35,7 +35,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" class="active">
             <i class="bx bx-list-ul"></i>
             <span class="links_name">Products</span>
           </a>
@@ -87,7 +87,23 @@
       <div class="home-content">
        
 
-        <br><br>
+
+        <div class="unique-breadcrumb-actions">
+          <!-- Breadcrumb Section -->
+          <div class="breadcrumb">
+            <a href="#" class="breadcrumb-link">Product</a>
+            <span class="breadcrumb-separator">›</span>
+            <span class="breadcrumb-current">Edit Product</span>
+          </div>
+        
+          <!-- Action Buttons -->
+          <div class="actions">
+            <button class="cancel-btn">✕ Cancel</button>
+            <button class="save-btn" style="display: flex;"><i class="bx bx-save" style="font-size: 20px;"></i> <span> Save Product</span></button>
+          </div>
+        </div>
+        
+
 
 
         <div class="sales-boxes">
@@ -239,7 +255,7 @@
 
 
           </div>
-          <div class="top-sales box">
+          <div class="top-sales box" style="height: 430px;">
 
 
             <div class="unique-category-status">
@@ -260,13 +276,22 @@
                   </div>
                 </div>
               </div>
+
+
+
+              
+              <br>
+              <hr style="height: 10px; background: #F5F6FA; width: 125%; margin-left: -2.7em; border:none;">
+             
             
               <!-- Status Section -->
               <div class="status-section">
+                <div style="display: flex;">
                 <h2>Status</h2>
-                <div class="status-indicator">
+                <div class="status-indicator" style="right: 3em; position: absolute;">
                   <span class="status-badge">Published</span>
                 </div>
+              </div>
                 <div class="input-gp">
                   <label for="product-status">Product Status</label>
                   <select id="product-status">

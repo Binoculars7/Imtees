@@ -222,3 +222,147 @@ h2 {
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
 }
+
+
+
+
+.unique-category-status {
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.input-gp {
+  margin-bottom: 15px;
+}
+
+.input-gp label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.input-gp select {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tags-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  background: #e9d8fd;
+  color: #6200ea;
+  padding: 5px 10px;
+  border-radius: 16px;
+  font-size: 14px;
+}
+
+.tag button {
+  background: none;
+  border: none;
+  color: #6200ea;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.status-section {
+  margin-top: 20px;
+}
+
+.status-indicator {
+  margin-bottom: 15px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  background: #ffe7c9;
+  color: #ff9800;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+
+
+
+.unique-breadcrumb-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-radius: 8px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.breadcrumb-link {
+  color: #1e88e5;
+  text-decoration: none;
+}
+
+.breadcrumb-link:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-separator {
+  margin: 0 5px;
+  color: #999;
+}
+
+.breadcrumb-current {
+  color: #333;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.cancel-btn {
+  background: none;
+  color: #666;
+  border: 1px solid #ddd;
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background: #f0f0f0;
+}
+
+.save-btn {
+  background: #6200ea;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background: #4a00b6;
+}
