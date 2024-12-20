@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Responsiive Admin Dashboard | CodingLab</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="morev.css">
+    <!-- Boxicons CDN Link -->
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  </head>
+
+
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <img src="../../home/assets/img/logo.png" width="40px" alt="">
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-box"></i>
+            <span class="links_name">Order</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-list-ul"></i>
+            <span class="links_name">Products</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-pie-chart-alt-2"></i>
+            <span class="links_name">Users</span>
+          </a>
+        </li>
+        
+        <li>
+          <a href="#" class="active">
+            <i class="bx bx-cog"></i>
+            <span class="links_name">Setting</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="#" style="border: none;">
+            <i class="bx bx-log-out"></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <nav>
+        <div class="sidebar-button">
+          <i class="bx bx-menu sidebarBtn"></i>
+          <span class="dashboard">Order</span>
+        </div>
+        <div class="search-box">
+          <input type="text" placeholder="Search for something" />
+          <i class="bx bx-search"></i>
+        </div>
+        <div style="background: #F8F5FA; font-size: 18px; border-radius: 50%;">
+          <i class="bx bx-cog" style="margin: 0.4em; color: #718EBF;"></i>
+        </div>
+        <div style="background: #F8F5FA; font-size: 18px; border-radius: 50%;">
+          <i class="bx bx-bell" style="margin: 0.4em; color: #FE5C73;"></i>
+        </div>
+
+        
+        <div class="profile-details">
+          <img src="images/profile.jpg" alt="" />
+        </div>
+      </nav>
+
+      <div class="home-content">
+       
+      <div class="sales-boxes">
+        <div class="recent-sales box">
+
+          
+
+
+
+
+  <div id="user-edit-profile">
+
+
+          <div id="profile-nav">
+            <ul class="nav-tabs">
+              <li class="nav-item">Edit Profile</li>
+              <li class="nav-item active-tab">Preferences</li>
+              <li class="nav-item">Security</li>
+            </ul>
+          </div>
+
+<br><br>
+  
+  
+          <div id="settings-container">
+            <div class="currency-time">
+              <div class="field-group">
+                <label for="currency-input" class="field-label">Currency</label>
+                <input type="text" id="currency-input" class="field-input" placeholder="USD" />
+              </div>
+              <div class="field-group">
+                <label for="timezone-input" class="field-label">Time Zone</label>
+                <input type="text" id="timezone-input" class="field-input" placeholder="(GMT-12:00) International Date Line West" />
+              </div>
+            </div><br>
+            <div class="notifications">
+              <h3 class="notification-header">Notification</h3>
+              <div class="toggle-group">
+                <label class="toggle-label">
+                  <input type="checkbox" class="toggle-input" checked />
+                  <span class="toggle-switch"></span>
+                  I send or receive digital currency
+                </label>
+              </div>
+              <div class="toggle-group">
+                <label class="toggle-label">
+                  <input type="checkbox" class="toggle-input" />
+                  <span class="toggle-switch"></span>
+                  I receive merchant order
+                </label>
+              </div>
+              <div class="toggle-group">
+                <label class="toggle-label">
+                  <input type="checkbox" class="toggle-input" checked />
+                  <span class="toggle-switch"></span>
+                  There are recommendations for my account
+                </label>
+              </div>
+            </div>
+            <button id="save-button">Save</button>
+          </div>
+          
+          <br><br><br><br><br><br>
+          
+          
+
+
+
+  </div>
+
+
+<br>
+
+
+       
+      
+<br>
+
+       
+
+
+
+      </div>
+    </section>
+
+
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".order-tab");
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      tabs.forEach((t) => t.classList.remove("active"));
+      tab.classList.add("active");
+    });
+  });
+});
+
+    </script>
+
+
+
+
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const paginationButtons = document.querySelectorAll(".pagination-btn");
+    
+        paginationButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            // Remove active class from all buttons
+            paginationButtons.forEach((btn) => btn.classList.remove("active"));
+            // Add active class to the clicked button
+            button.classList.add("active");
+          });
+        });
+      });
+    </script>
+    
+
+
+
+
+
+
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Add dropdown interaction
+        document.querySelectorAll(".status").forEach((element) => {
+          const status = element.textContent.trim().toLowerCase();
+          switch (status) {
+            case "pending":
+              element.style.Color = "#FFC60029";
+              break;
+            case "completed":
+              element.style.Color = "#c7ebadba";
+              break;
+            case "canceled":
+              element.style.Color = "rgb(217, 81, 81)";
+              break;
+            case "picked":
+              element.style.Color = "#8a2be2";
+              break;
+            case "shipped":
+              element.style.Color = "purple";
+              break;
+            case "delivered":
+              element.style.Color = "dodgerblue";
+              break;
+            default:
+              element.style.Color = "#000";
+          }
+        });
+      });
+    </script>
+    
+
+    
+
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".sidebarBtn");
+      sidebarBtn.onclick = function () {
+        sidebar.classList.toggle("active");
+        if (sidebar.classList.contains("active")) {
+          sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+        } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+      };
+    </script>
+  </body>
+</html>
