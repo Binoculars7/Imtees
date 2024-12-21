@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+
+  <div>
+    <header class="menu-bar">
+      <!-- Logo Section -->
+      <div class="menu-logo">
+        <img src="logo.png" alt="Brand Logo" class="brand-logo" />
+      </div>
+    
+      <!-- Navigation Links -->
+      <nav class="menu-nav">
+        <ul class="nav-links">
+          <li><a href="#" class="nav-link">Home</a></li>
+          <li><a href="#" class="nav-link active">Shops</a></li>
+          <li><a href="#" class="nav-link">How it works</a></li>
+          <li><a href="#" class="nav-link">Store</a></li>
+        </ul>
+      </nav>
+    
+      <!-- Search Bar and Icons -->
+      <div class="menu-actions">
+        <div class="search-bar">
+          <input type="text" placeholder="Search for product..." class="search-input" />
+          <button class="search-btn">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        <div class="action-icons">
+          <a href="#" class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+          <a href="#" class="heart-icon">
+            <i class="fas fa-heart"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+    
+  </div>
+
+  <div class="main-wall">
+    <div class="wall1">
+
+<div id="custom-filter-container">
+  <h3>Filters</h3>
+
+  <!-- Sort By -->
+  <div class="filter-section">
+    <div class="filter-header" data-target="sort-by-options">
+      Sort By <span class="arrow">&#9662;</span>
+    </div>
+    <div class="filter-options hidden" id="sort-by-options">
+      <label><input type="radio" name="sort" value="newest"> Newest</label><br>
+      <label><input type="radio" name="sort" value="relevance"> Relevance</label>
+    </div>
+  </div>
+
+  <!-- Price Range -->
+  <div class="filter-section">
+    <div class="filter-header" data-target="price-range-options">
+      Price Range <span class="arrow">&#9662;</span>
+    </div>
+    <div class="filter-options hidden" id="price-range-options">
+      <div class="price-slider">
+        <span id="price-min">$5</span>
+        <input type="range" id="price-slider" min="5" max="100" value="50">
+        <span id="price-max">$100</span>
+      </div>
+    </div>
+  </div>
+
+ <!-- Colors -->
+<div class="filter-section">
+  <div class="filter-header" data-target="colors-options">
+    Colors <span class="arrow">&#9662;</span>
+  </div>
+  <div class="filter-options hidden" id="colors-options">
+    <div class="color-circle black" data-color="black"></div>
+    <div class="color-circle gray" data-color="gray"></div>
+    <div class="color-circle red" data-color="red"></div>
+    <div class="color-circle yellow" data-color="yellow"></div>
+    <div class="color-circle white" data-color="white"></div>
+    <div class="color-circle teal" data-color="teal"></div>
+  </div>
+</div>
+
+
+  <!-- Embroidery -->
+  <div class="filter-section">
+    <div class="filter-header" data-target="embroidery-options">
+      Embroidery <span class="arrow">&#9662;</span>
+    </div>
+    <div class="filter-options hidden" id="embroidery-options">
+      <label><input type="checkbox" value="floral"> Floral</label><br>
+      <label><input type="checkbox" value="geometric"> Geometric</label><br>
+      <label><input type="checkbox" value="abstract"> Abstract</label>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+<div class="wall2">
+
+</div>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,261 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #F8F8F8;
+}
+
+
+.main-wall{
+   width: 100%;
+    display: flex;
+}
+.wall1{
+    border: 1px solid grey;
+    width: 20%;
+    height: 100vh;
+}
+.wall2{
+    border:1px solid grey;
+    width: 80%;
+    height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* General Styles */
+  #custom-filter-container {
+    width: 250px;
+    padding: 15px;
+    border-radius: 5px;
+    color: #828384;
+    font-family: Arial;
+  }
+  
+  h3 {
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-align: left;
+    color: #828384;
+    font-family: Arial;
+    padding-left: 7px;
+  }
+  
+  /* Filter Header */
+  .filter-header {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+    border-radius: 4px;
+  }
+  
+  .filter-header:hover {
+    background-color: #eaeaea;
+  }
+  
+  .arrow {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+  }
+  
+  .arrow.open {
+    transform: rotate(180deg);
+  }
+  
+  /* Filter Options */
+  .filter-options {
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Price Range */
+  .price-slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  #price-slider {
+    margin: 0 10px;
+    width: 100%;
+  }
+
+  /* Color Circles */
+.color-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .color-circle::after {
+    content: "✓";
+    font-size: 16px;
+    color: white;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .color-circle.white::after, .color-circle.yellow::after{
+    content: "✓";
+    font-size: 16px;
+    color: black;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .color-circle.selected {
+    border: 2px solid #000;
+  }
+  
+  .color-circle.selected::after {
+    display: block;
+  }
+  
+
+
+  .color-circle.black { background-color: black; }
+  .color-circle.gray { background-color: gray; }
+  .color-circle.red { background-color: red; }
+  .color-circle.yellow { background-color: yellow; }
+  .color-circle.white { background-color: white; border: 1px solid #aaa; }
+  .color-circle.teal { background-color: teal; }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* General Styles */
+
+  
+  .menu-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu-logo .brand-logo {
+    width: 50px;
+    height: auto;
+  }
+  
+  /* Navigation Links */
+  .menu-nav .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links .nav-link {
+    text-decoration: none;
+    margin: 0 15px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .nav-links .nav-link.active {
+    color: #6a1b9a;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  /* Search Bar */
+  .menu-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  .search-input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background-color: transparent;
+    width: 200px;
+  }
+  
+  .search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  /* Icons */
+  .action-icons a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .menu-bar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .menu-nav .nav-links {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .nav-links .nav-link {
+      margin: 10px 0;
+      text-align: left;
+    }
+  
+    .search-bar .search-input {
+      width: 150px;
+    }
+  }
+  
