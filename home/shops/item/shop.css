@@ -3,20 +3,17 @@ body {
     margin: 0;
     padding: 0;
     background: #F8F8F8;
+    box-sizing: border-box;
 }
 
 
 .main-wall{
    width: 100%;
-    display: flex;
+    display: block;
 }
-.wall1{
-    width: auto !important;
-    padding-left: 2em !important;
-    padding-right: 2em !important;
-}
+
 .wall2{
-    width: 85% !important;
+    width: 100% !important;
 }
 
 

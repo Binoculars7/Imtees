@@ -7,14 +7,15 @@
   <link rel="stylesheet" href="shop.css">
   <link rel="stylesheet" href="cloth.css">
   <link rel="stylesheet" href="cart.css">
+  <link rel="stylesheet" href="mark.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="icon" href="../assets/img/logo.png" type="image/png">
+  <link rel="icon" href="../../assets/img/logo.png" type="image/png">
 
-  <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
+  <link rel="stylesheet" href="../../assets/vendor/animate/animate.css">
 
-  <link rel="stylesheet" href="../assets/css/bootstrap.css">
+  <link rel="stylesheet" href="../../assets/css/bootstrap.css">
 
-  <link rel="stylesheet" href="../assets/css/maicons.css">
+  <link rel="stylesheet" href="../../assets/css/maicons.css">
 </head>
 <body>
 
@@ -22,7 +23,7 @@
     <header class="menu-bar">
       <!-- Logo Section -->
       <div class="menu-logo">
-        <img src="../assets/img/logo.png" alt="Brand Logo" class="brand-logo" />
+        <img src="../../assets/img/logo.png" alt="Brand Logo" class="brand-logo" />
       </div>
     
       <!-- Navigation Links -->
@@ -58,75 +59,73 @@
   </div>
 
   <main>
+
+
+    
+
+
+
+    <br>
      <div class="main-wall">
-    <div class="wall1">
 
-<div id="custom-filter-container">
-  <h3>Filters</h3>
-
-  <!-- Sort By -->
-  <div class="filter-section">
-    <div class="filter-header" data-target="sort-by-options">
-      Sort By <span class="arrow">&#9662;</span>
-    </div>
-    <div class="filter-options hidden" id="sort-by-options">
-      <label><input type="radio" name="sort" value="newest"> Newest</label><br>
-      <label><input type="radio" name="sort" value="relevance"> Relevance</label>
-    </div>
-  </div>
-
-  <!-- Price Range -->
-  <div class="filter-section">
-    <div class="filter-header" data-target="price-range-options">
-      Price Range <span class="arrow">&#9662;</span>
-    </div>
-    <div class="filter-options hidden" id="price-range-options">
-      <div class="price-slider">
-        <span id="price-min">$5</span>
-        <input type="range" id="price-slider" min="5" max="100" value="50">
-        <span id="price-max">$100</span>
-      </div>
-    </div>
-  </div>
-
- <!-- Colors -->
-<div class="filter-section">
-  <div class="filter-header" data-target="colors-options">
-    Colors <span class="arrow">&#9662;</span>
-  </div>
-  <div class="filter-options hidden" id="colors-options">
-    <div class="color-circle black" data-color="black"></div>
-    <div class="color-circle gray" data-color="gray"></div>
-    <div class="color-circle red" data-color="red"></div>
-    <div class="color-circle yellow" data-color="yellow"></div>
-    <div class="color-circle white" data-color="white"></div>
-    <div class="color-circle teal" data-color="teal"></div>
-  </div>
-</div>
-
-
-  <!-- Embroidery -->
-  <div class="filter-section">
-    <div class="filter-header" data-target="embroidery-options">
-      Embroidery <span class="arrow">&#9662;</span>
-    </div>
-    <div class="filter-options hidden" id="embroidery-options">
-      <label><input type="checkbox" value="floral"> Floral</label><br>
-      <label><input type="checkbox" value="geometric"> Geometric</label><br>
-      <label><input type="checkbox" value="abstract"> Abstract</label>
-    </div>
-  </div>
-</div>
-
-
-
-</div>
+      
+      
 <div class="wall2">
-<br>
 
-  <div class="containers">
+  <div class="container">
+
+
+
+    <div class="cart-product">
+
+
+      <div id="uniqueCart_container">
+        <div id="uniqueCart_imageContainer">
+          <img src="images/cloth2.png" alt="T-Shirt" id="uniqueCart_productImage" />
+        </div>
+        <div id="uniqueCart_detailsContainer">
+          <h2 id="uniqueCart_productName">Round Neck for Weekends</h2>
+          <p id="uniqueCart_designer">Designed by <span>Monk Walter</span></p>
+          <div id="uniqueCart_colorContainer">
+            <p>Color:</p>
+            <div class="uniqueCart_colorOptions">
+              <button class="uniqueCart_color uniqueCart_black selected"></button>
+              <button class="uniqueCart_color uniqueCart_white"></button>
+              <button class="uniqueCart_color uniqueCart_red"></button>
+              <button class="uniqueCart_color uniqueCart_yellow"></button>
+              <button class="uniqueCart_color uniqueCart_teal"></button>
+            </div>
+          </div>
+          <div id="uniqueCart_sizeContainer">
+            <p>Size:</p>
+            <div class="uniqueCart_sizes">
+              <button class="uniqueCart_size">S</button>
+              <button class="uniqueCart_size">M</button>
+              <button class="uniqueCart_size">L</button>
+              <button class="uniqueCart_size">XL</button>
+              <button class="uniqueCart_size">XXL</button>
+              <button class="uniqueCart_size">XXXL</button>
+            </div>
+          </div>
+          <p id="uniqueCart_price">$20.08</p>
+          <div id="uniqueCart_quantityContainer">
+            <button id="uniqueCart_decreaseQty">-</button>
+            <span id="uniqueCart_quantity">1</span>
+            <button id="uniqueCart_increaseQty">+</button>
+          </div>
+          <button id="uniqueCart_addToCart">Add to Cart</button>
+        </div>
+      </div>
+      
+
+
+
+    </div>
+    
+
+<br><br>
     <div class="header">
-      <h1>Categories</h1>
+      <h1>Get this designs on other product</h1>
     </div>
     <div class="buttons">
       <button class="product-btn active" data-product="youth-tshirt">All</button>
@@ -334,7 +333,7 @@
   <div class="container">
     <div class="row justify-content-center mb-5">
       <div>
-        <h3 style="color: white; margin-left: -1em; margin-top: -1em;"><img src="../assets/img/logo.png" width="50px" alt=""></h3>
+        <h3 style="color: white; margin-left: -1em; margin-top: -1em;"><img src="../../assets/img/logo.png" width="50px" alt=""></h3>
         
       </div>
       <div class="col-lg-2 py-3">
@@ -394,6 +393,27 @@
 
 
 <script src="script.js"></script>
+
+
+
+
+<script>
+  document.getElementById('uniqueCart_increaseQty').addEventListener('click', () => {
+  const quantityElement = document.getElementById('uniqueCart_quantity');
+  let quantity = parseInt(quantityElement.textContent);
+  quantityElement.textContent = ++quantity;
+});
+
+document.getElementById('uniqueCart_decreaseQty').addEventListener('click', () => {
+  const quantityElement = document.getElementById('uniqueCart_quantity');
+  let quantity = parseInt(quantityElement.textContent);
+  if (quantity > 1) quantityElement.textContent = --quantity;
+});
+
+</script>
+
+
+
 
 
 
