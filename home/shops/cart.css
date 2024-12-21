@@ -1,0 +1,145 @@
+
+    #activer{
+    color: #700FDC;
+  }
+  footer a, footer li a{
+    color:white;
+  }
+  .minus{
+    padding: 0.2em 0.8em;
+    border:1px solid black;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 10px 0 0 10px;
+    border-right: none;
+  }
+  #growth1, #growth2, #growth3, #growth4{
+  display: none; /* Initially hidden */
+}
+#up1, #up2, #up3, #up4{
+  display: none; /* Initially hidden */
+}
+  .plus{
+    padding: 0.2em 0.8em;
+    border:1px solid black;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 0 10px 10px 0;
+    border-left: none;
+  }
+  .num{
+    padding: 0.2em 0.8em;
+    border:1px solid black;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .shop-now{
+    background: #410784;
+    color:white;
+    padding: 0.5em 1.5em;
+    border-radius: 10px;
+    margin-top: 0.5em;
+  }
+  .cart-section{
+    display: flex;
+    margin-top: 0em;
+    margin-bottom: 2em;
+    margin-left: 0.8em;
+  }
+  a{
+    text-decoration: none;
+  }
+  @media(max-width:1000px) {
+    #flexer{
+      flex-wrap: wrap;
+      margin: auto;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*footer*/
+
+  .page-footer {
+    position: relative;
+    display: flex;
+    padding-top: 80px;
+    padding-bottom: 16px;
+    background-color: #fff;
+    border-top: 1px solid #e9e8f5;
+  }
+  
+  .page-footer p a {
+    transition: color .2s ease;
+  }
+  
+  .page-footer h3,
+  .page-footer h4,
+  .page-footer h5 {
+    color: #645F88;
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+  
+  .page-footer p {
+    color: #898798;
+  }
+  
+  .footer-menu {
+    position: relative;
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  .footer-menu li {
+    margin-bottom: 12px;
+  }
+  
+  .footer-link {
+    display: inline-block;
+    padding: 6px 0;
+  }
+  
+  .footer-menu a,
+  .footer-link {
+    color: #898798;
+  }
+  
+  .footer-menu a:hover,
+  .footer-link:hover {
+    color: #700FDC;
+    text-decoration: none;
+  }
+  
+  .sosmed-button a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 44px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #F6F5FC;
+    color: #898798;
+    transition: all .2s linear;
+  }
+  
+  .sosmed-button a:hover {
+    background-color: #700FDC;
+    color: #fff;
+    text-decoration: none;
+    transform: rotate(360deg);
+  }
+  
