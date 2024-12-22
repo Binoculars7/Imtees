@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="shop.css">
-  <link rel="stylesheet" href="cloth.css">
-  <link rel="stylesheet" href="cart.css">
-  <link rel="stylesheet" href="mark.css">
+  <link rel="stylesheet" href="shops.css">
+  <link rel="stylesheet" href="cloths.css">
+  <link rel="stylesheet" href="carts.css">
+  <link rel="stylesheet" href="marks.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="icon" href="../../assets/img/logo.png" type="image/png">
 
@@ -78,47 +78,53 @@
 
     <div class="cart-product">
 
-
+     
       <div id="uniqueCart_container">
         <div id="uniqueCart_imageContainer">
-          <img src="images/cloth2.png" alt="T-Shirt" id="uniqueCart_productImage" />
+          <img src="../images/cloth2.png" alt="T-Shirt" id="uniqueCart_productImage">
         </div>
         <div id="uniqueCart_detailsContainer">
           <h2 id="uniqueCart_productName">Round Neck for Weekends</h2>
           <p id="uniqueCart_designer">Designed by <span>Monk Walter</span></p>
+    
+          <!-- Color Selection -->
           <div id="uniqueCart_colorContainer">
             <p>Color:</p>
             <div class="uniqueCart_colorOptions">
-              <button class="uniqueCart_color uniqueCart_black selected"></button>
-              <button class="uniqueCart_color uniqueCart_white"></button>
-              <button class="uniqueCart_color uniqueCart_red"></button>
-              <button class="uniqueCart_color uniqueCart_yellow"></button>
-              <button class="uniqueCart_color uniqueCart_teal"></button>
+              <button class="uniqueCart_color uniqueCart_black selected" data-color="Black"></button>
+              <button class="uniqueCart_color uniqueCart_white" data-color="White"></button>
+              <button class="uniqueCart_color uniqueCart_red" data-color="Red"></button>
+              <button class="uniqueCart_color uniqueCart_yellow" data-color="Yellow"></button>
+              <button class="uniqueCart_color uniqueCart_teal" data-color="Teal"></button>
             </div>
           </div>
+    
+          <!-- Size Selection -->
           <div id="uniqueCart_sizeContainer">
             <p>Size:</p>
             <div class="uniqueCart_sizes">
-              <button class="uniqueCart_size">S</button>
-              <button class="uniqueCart_size">M</button>
-              <button class="uniqueCart_size">L</button>
-              <button class="uniqueCart_size">XL</button>
-              <button class="uniqueCart_size">XXL</button>
-              <button class="uniqueCart_size">XXXL</button>
+              <button class="uniqueCart_size" data-size="S">S</button>
+              <button class="uniqueCart_size" data-size="M">M</button>
+              <button class="uniqueCart_size" data-size="L">L</button>
+              <button class="uniqueCart_size" data-size="XL">XL</button>
+              <button class="uniqueCart_size" data-size="XXL">XXL</button>
+              <button class="uniqueCart_size" data-size="XXXL">XXXL</button>
             </div>
           </div>
+    
+          <!-- Price and Quantity -->
           <p id="uniqueCart_price">$20.08</p>
           <div id="uniqueCart_quantityContainer">
             <button id="uniqueCart_decreaseQty">-</button>
             <span id="uniqueCart_quantity">1</span>
             <button id="uniqueCart_increaseQty">+</button>
           </div>
+          
+          <!-- Add to Cart -->
           <button id="uniqueCart_addToCart">Add to Cart</button>
         </div>
       </div>
-      
-
-
+    
 
     </div>
     
@@ -127,7 +133,7 @@
     <div class="header">
       <h1>Get this designs on other product</h1>
     </div>
-    <div class="buttons">
+    <div class="buttons" style="text-align: center !important; align-items: center !important; justify-content: center !important;">
       <button class="product-btn active" data-product="youth-tshirt">All</button>
       <button class="product-btn" data-product="crewneck">Men</button>
       <button class="product-btn" data-product="kid-tees">Women</button>
@@ -195,133 +201,26 @@
         </div>
 
       </div>
-
-      <div class="product-card">
-        <img src="images/cloth4.png" alt="Youth Tshirt Front">
-
-        <div class='cart-section'>
-          <div style='margin-top: 0.3em;'>
-            <div style='font-size: 13px;'>Round Neck</div>
-            <div style='font-size: 20px;'>$20</div>
-          </div>
-          <div style='right: 1em; position: absolute;'>
-            <div><a href='#' class='minus'>-</a><a href='#' class='num'>1</a><a href='#' class='plus'>+</a></div>
-            <div style='margin-top: 1.1em;'><a href='#' class='shop-now'><span class='fa fa-shopping-cart'></span> Shop</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="images/cloth3.png" alt="Youth Tshirt Back">
-        
-        <div class='cart-section'>
-          <div style='margin-top: 0.3em;'>
-            <div style='font-size: 13px;'>Round Neck</div>
-            <div style='font-size: 20px;'>$20</div>
-          </div>
-          <div style='right: 1em; position: absolute;'>
-            <div><a href='#' class='minus'>-</a><a href='#' class='num'>1</a><a href='#' class='plus'>+</a></div>
-            <div style='margin-top: 1.1em;'><a href='#' class='shop-now'><span class='fa fa-shopping-cart'></span> Shop</a></div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="product-card">
-        <img src="images/cloth1.png" alt="Youth Tshirt Front">
-
-        <div class='cart-section'>
-          <div style='margin-top: 0.3em;'>
-            <div style='font-size: 13px;'>Round Neck</div>
-            <div style='font-size: 20px;'>$20</div>
-          </div>
-          <div style='right: 1em; position: absolute;'>
-            <div><a href='#' class='minus'>-</a><a href='#' class='num'>1</a><a href='#' class='plus'>+</a></div>
-            <div style='margin-top: 1.1em;'><a href='#' class='shop-now'><span class='fa fa-shopping-cart'></span> Shop</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="images/cloth2.png" alt="Youth Tshirt Back">
-        
-        <div class='cart-section'>
-          <div style='margin-top: 0.3em;'>
-            <div style='font-size: 13px;'>Round Neck</div>
-            <div style='font-size: 20px;'>$20</div>
-          </div>
-          <div style='right: 1em; position: absolute;'>
-            <div><a href='#' class='minus'>-</a><a href='#' class='num'>1</a><a href='#' class='plus'>+</a></div>
-            <div style='margin-top: 1.1em;'><a href='#' class='shop-now'><span class='fa fa-shopping-cart'></span> Shop</a></div>
-          </div>
-        </div>
-
-      </div>
-
-
-      <div class="product-card">
-        <img src="images/cloth1.png" alt="Youth Tshirt Front">
-
-        <div class='cart-section'>
-          <div style='margin-top: 0.3em;'>
-            <div style='font-size: 13px;'>Round Neck</div>
-            <div style='font-size: 20px;'>$20</div>
-          </div>
-          <div style='right: 1em; position: absolute;'>
-            <div><a href='#' class='minus'>-</a><a href='#' class='num'>1</a><a href='#' class='plus'>+</a></div>
-            <div style='margin-top: 1.1em;'><a href='#' class='shop-now'><span class='fa fa-shopping-cart'></span> Shop</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="images/cloth2.png" alt="Youth Tshirt Back">
-        
-        <div class='cart-section'>
-          <div style='margin-top: 0.3em;'>
-            <div style='font-size: 13px;'>Round Neck</div>
-            <div style='font-size: 20px;'>$20</div>
-          </div>
-          <div style='right: 1em; position: absolute;'>
-            <div><a href='#' class='minus'>-</a><a href='#' class='num'>1</a><a href='#' class='plus'>+</a></div>
-            <div style='margin-top: 1.1em;'><a href='#' class='shop-now'><span class='fa fa-shopping-cart'></span> Shop</a></div>
-          </div>
-        </div>
-
-      </div>
-
-
-      <div class="product-card">
-        <img src="images/cloth1.png" alt="Youth Tshirt Front">
-
-        <div class='cart-section'>
-          <div style='margin-top: 0.3em;'>
-            <div style='font-size: 13px;'>Round Neck</div>
-            <div style='font-size: 20px;'>$20</div>
-          </div>
-          <div style='right: 1em; position: absolute;'>
-            <div><a href='#' class='minus'>-</a><a href='#' class='num'>1</a><a href='#' class='plus'>+</a></div>
-            <div style='margin-top: 1.1em;'><a href='#' class='shop-now'><span class='fa fa-shopping-cart'></span> Shop</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="product-card">
-        <img src="images/cloth4.png" alt="Youth Tshirt Back">
-        
-        <div class='cart-section'>
-          <div style='margin-top: 0.3em;'>
-            <div style='font-size: 13px;'>Round Neck</div>
-            <div style='font-size: 20px;'>$20</div>
-          </div>
-          <div style='right: 1em; position: absolute;'>
-            <div><a href='#' class='minus'>-</a><a href='#' class='num'>1</a><a href='#' class='plus'>+</a></div>
-            <div style='margin-top: 1.1em;'><a href='#' class='shop-now'><span class='fa fa-shopping-cart'></span> Shop</a></div>
-          </div>
-        </div>
-
-      </div>
     </div>
   </div>
   
 </div>
 </div>
+
+
+<br><br>
+
+<div id="custom-pagination-container">
+  <button id="custom-pagination-prev" disabled>Previous</button>
+  <div id="custom-pagination-pages">
+    <!-- Dynamic pages will be inserted here -->
+  </div>
+  <button id="custom-pagination-next">Next</button>
+</div>
+
+
+
+
   </main>
  
 
@@ -395,25 +294,7 @@
 <script src="script.js"></script>
 
 
-
-
-<script>
-  document.getElementById('uniqueCart_increaseQty').addEventListener('click', () => {
-  const quantityElement = document.getElementById('uniqueCart_quantity');
-  let quantity = parseInt(quantityElement.textContent);
-  quantityElement.textContent = ++quantity;
-});
-
-document.getElementById('uniqueCart_decreaseQty').addEventListener('click', () => {
-  const quantityElement = document.getElementById('uniqueCart_quantity');
-  let quantity = parseInt(quantityElement.textContent);
-  if (quantity > 1) quantityElement.textContent = --quantity;
-});
-
-</script>
-
-
-
+<script src="scripts.js"></script>
 
 
 
@@ -435,28 +316,16 @@ document.getElementById('uniqueCart_decreaseQty').addEventListener('click', () =
         "youth-tshirt": [
           { src: "images/cloth1.png", description: "Youth tshirt", price: "$2.43" },
           { src: "images/cloth3.png", description: "Youth tshirt", price: "$2.43" },
-          { src: "images/cloth1.png", description: "Kid tees", price: "$4.00" },
           { src: "images/cloth2.png", description: "Kid tees", price: "$4.00" },
-          { src: "images/cloth4.png", description: "Kid tees", price: "$4.00" },
-          { src: "images/cloth3.png", description: "Kid tees", price: "$4.00" },
-          { src: "images/cloth1.png", description: "Kid tees", price: "$4.00" },
-          { src: "images/cloth2.png", description: "Kid tees", price: "$4.00" },
-          { src: "images/cloth1.png", description: "Kid tees", price: "$4.00" },
-          { src: "images/cloth2.png", description: "Kid tees", price: "$4.00" },
-          { src: "images/cloth1.png", description: "Kid tees", price: "$4.00" },
           { src: "images/cloth4.png", description: "Kid tees", price: "$4.00" }
         ],
         "crewneck": [
           { src: "images/cloth2.png", description: "Crewneck", price: "$3.50" },
           { src: "images/cloth2.png", description: "Crewneck", price: "$3.50" },
           { src: "images/cloth2.png", description: "Kid tees", price: "$4.00" },
-          { src: "images/cloth2.png", description: "Kid tees", price: "$4.00" },
-          { src: "images/cloth2.png", description: "Kid tees", price: "$4.00" },
           { src: "images/cloth2.png", description: "Kid tees", price: "$4.00" }
         ],
         "kid-tees": [
-          { src: "images/cloth1.png", description: "Kid tees", price: "$4.00" },
-          { src: "images/cloth1.png", description: "Kid tees", price: "$4.00" },
           { src: "images/cloth1.png", description: "Kid tees", price: "$4.00" },
           { src: "images/cloth1.png", description: "Kid tees", price: "$4.00" },
           { src: "images/cloth1.png", description: "Kid tees", price: "$4.00" },
@@ -465,8 +334,12 @@ document.getElementById('uniqueCart_decreaseQty').addEventListener('click', () =
         "long-sleeve": [
           { src: "images/cloth3.png", description: "Long sleeve", price: "$4.00" },
           { src: "images/cloth3.png", description: "Long sleeve", price: "$4.00" },
+          { src: "images/cloth3.png", description: "Long sleeve", price: "$4.00" },
+          { src: "images/cloth3.png", description: "Long sleeve", price: "$4.00" }
         ],
         "adult-tshirt": [
+          { src: "images/cloth4.png", description: "Adult tshirt", price: "$3.00" },
+          { src: "images/cloth4.png", description: "Adult tshirt", price: "$3.00" },
           { src: "images/cloth4.png", description: "Adult tshirt", price: "$3.00" },
           { src: "images/cloth4.png", description: "Adult tshirt", price: "$3.00" }
         ]
