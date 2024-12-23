@@ -1,0 +1,189 @@
+/* Container styles */
+#unique-container {
+  font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+.unique-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 20px;
+}
+
+.unique-header h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Buttons in header */
+.unique-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.unique-btn {
+  padding: 12px 16px;
+  border: 2px solid #700FDC;
+  border-radius: 15px;
+  background-color: transparent;
+  color: #700FDC;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.unique-btn:hover {
+  background-color: #f3e8ff;
+  color: #700FDC;
+}
+
+.unique-btn.active {
+  background-color: #700FDC;
+  color: #fff;
+  border-color: #700FDC;
+}
+
+/* Tabs section */
+.unique-tabs {
+  margin-top: 2em;
+  display: flex;
+  gap: 30px;
+  padding: 10px 20px;
+  padding-bottom: 0;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.unique-tab {
+  border: none;
+  background: none;
+  font-size: 18px;
+  color:#4A4A4A;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.unique-tab:hover {
+  color: #4c1d95;
+}
+
+.unique-tab.active {
+  color: #700FDC;
+  border-bottom: 2px solid #700FDC;
+}
+
+
+
+
+
+
+.ship-from-address {
+  font-family: Arial, sans-serif;
+  padding: 4px;
+  border-radius: 8px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.address-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.address-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  margin-top: 1em;
+}
+
+.address-tab {
+  border-bottom: 1px solid #666;
+  margin-bottom: 30px;
+  padding: 5px 10px;
+  margin-top: 2em;
+}
+
+.address-tab-label {
+  font-size: 18px;
+  color: #6200ea;
+  border-bottom: 3px solid #6200ea;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+.address-subtitle {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.address-options {
+  margin-bottom: 20px;
+}
+
+.address-option {
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 2em;
+}
+
+.address-radio {
+  margin-right: 10px;
+}
+
+.option-label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.option-description {
+  font-size: 15px;
+  color: #666;
+  display: block;
+  margin-left: 24px;
+  margin-top: 0.5em;
+}
+
+.address-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cancel-btn {
+  background-color: transparent;
+  color: #6200ea;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: 2px solid #6200ea;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cancel-btn:hover {
+  background-color: #f3eaff;
+}
+
+.save-btn {
+  background-color: #6200ea;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.save-btn:hover {
+  background-color: #4a00b6;
+}
