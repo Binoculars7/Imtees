@@ -1,0 +1,136 @@
+/* Container */
+.create-order-container-unique {
+    font-family: 'Arial', sans-serif;
+    color: #333333;
+    padding: 20px;
+    background-color: #ffffff;
+  }
+  
+  /* Back to products link */
+  .back-to-products-unique {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #666666;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .back-to-products-unique i {
+    font-size: 16px;
+  }
+  
+  .back-to-products-unique:hover {
+    color: #000000;
+  }
+  
+  /* Header */
+  .header-container-unique {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header-container-unique h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .discard-order-button-unique {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #d9534f;
+    border: 1px solid #d9534f;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .discard-order-button-unique i {
+    font-size: 16px;
+  }
+  
+  .discard-order-button-unique:hover {
+    background-color: #d9534f;
+    color: #ffffff;
+  }
+  
+  /* Steps */
+  .order-steps-unique {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #999999;
+  }
+  
+  .active-step-unique {
+    font-weight: bold;
+    color: #333333;
+  }
+  
+  /* Add products section */
+  .add-products-container-unique {
+    margin: 20px 0;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .add-products-box-unique {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #333333;
+  }
+  
+  .add-products-container-unique:hover {
+    background-color: #f5f5f5;
+    border-color: #999999;
+  }
+  
+  .add-products-box-unique i {
+    font-size: 16px;
+    color: #333333;
+  }
+  
+  /* Order summary */
+  .order-summary-unique {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .order-summary-unique span {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .next-step-button-unique {
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #333333;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .next-step-button-unique:hover {
+    background-color: #555555;
+  }
+  
