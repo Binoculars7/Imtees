@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Responsiive Admin Dashboard | CodingLab</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mores.css">
+    <!-- Boxicons CDN Link -->
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  </head>
+
+
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <img src="../../home/assets/img/logo.png" width="40px" alt="">
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="../">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="active">
+            <i class="bx bx-box"></i>
+            <span class="links_name">Order</span>
+          </a>
+        </li>
+        <li>
+          <a href="../products/">
+            <i class="bx bx-list-ul"></i>
+            <span class="links_name">Products</span>
+          </a>
+        </li>
+        <li>
+          <a href="../users/">
+            <i class="bx bx-pie-chart-alt-2"></i>
+            <span class="links_name">Users</span>
+          </a>
+        </li>
+        
+        <li>
+          <a href="../setting/edit-profile/">
+            <i class="bx bx-cog"></i>
+            <span class="links_name">Setting</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="#" style="border: none;">
+            <i class="bx bx-log-out"></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <nav>
+        <div class="sidebar-button">
+          <i class="bx bx-menu sidebarBtn"></i>
+          <span class="dashboard">Order</span>
+        </div>
+        <div class="search-box">
+          <input type="text" placeholder="Search for something" />
+          <i class="bx bx-search"></i>
+        </div>
+        <div style="background: #F8F5FA; font-size: 18px; border-radius: 50%;">
+          <i class="bx bx-cog" style="margin: 0.4em; color: #718EBF;"></i>
+        </div>
+        <div style="background: #F8F5FA; font-size: 18px; border-radius: 50%;">
+          <i class="bx bx-bell" style="margin: 0.4em; color: #FE5C73;"></i>
+        </div>
+
+        
+        <div class="profile-details">
+          <img src="images/profile.jpg" alt="" />
+        </div>
+      </nav>
+
+      <div class="home-content">
+       
+
+
+
+
+
+
+
+        <div class="order-management">
+          <div class="order-header">
+            <h2>Order Management</h2>
+          </div>
+          <div class="order-tabs">
+            <button class="order-tab active">Pending</button>
+            <button class="order-tab">Confirmed</button>
+            <button class="order-tab">Processing</button>
+            <button class="order-tab">Picked</button>
+            <button class="order-tab">Shipped</button>
+            <button class="order-tab">Delivered</button>
+            <button class="order-tab">Cancelled</button>
+          </div>
+          <div class="order-actions">
+            <div class="search-boxk">
+              <input type="text" placeholder="Search by order id" />
+              <button><i class="fa fa-search"></i></button>
+            </div>
+            <div class="filter-dropdown">
+              <select>
+                <option>Filter by date range</option>
+                <option>Last 7 days</option>
+                <option>Last 30 days</option>
+                <option>This Month</option>
+                <option>Last Month</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        
+
+
+
+        <div class="sales-boxes">
+          <div class="recent-sales box">
+
+
+            <div class="order-table-wrapper">
+              <table class="order-table">
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Created</th>
+                    <th>Customer</th>
+                    <th>Total</th>
+                    <th>Profit</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Example rows -->
+                  <tr>
+                    <td><b>#6548</b></td>
+                    <td>2 min ago</td>
+                    <td>Joseph Wheeler</td>
+                    <td>$54</td>
+                    <td>$154 <span class="profit-percentage">16%</span></td>
+                    <td><span class="status pending">Pending</span></td>
+                  </tr>
+                  <tr>
+                    <td><b>#6548</b></td>
+                    <td>2 min ago</td>
+                    <td>Joseph Wheeler</td>
+                    <td>$54</td>
+                    <td>$154 <span class="profit-percentage">16%</span></td>
+                    <td><span class="status confirmed">Confirmed</span></td>
+                  </tr>
+                  <tr>
+                    <td><b>#6548</b></td>
+                    <td>2 min ago</td>
+                    <td>Joseph Wheeler</td>
+                    <td>$54</td>
+                    <td>$154 <span class="profit-percentage">16%</span></td>
+                    <td><span class="status processing">Processing</span></td>
+                  </tr>
+                  <tr>
+                    <td><b>#6548</b></td>
+                    <td>2 min ago</td>
+                    <td>Joseph Wheeler</td>
+                    <td>$54</td>
+                    <td>$154 <span class="profit-percentage">16%</span></td>
+                    <td><span class="status confirmed">Confirmed</span></td>
+                  </tr>
+                  <tr>
+                    <td><b>#6548</b></td>
+                    <td>2 min ago</td>
+                    <td>Joseph Wheeler</td>
+                    <td>$54</td>
+                    <td>$154 <span class="profit-percentage">16%</span></td>
+                    <td><span class="status processing">Processing</span></td>
+                  </tr>
+                  <tr>
+                    <td><b>#6548</b></td>
+                    <td>2 min ago</td>
+                    <td>Joseph Wheeler</td>
+                    <td>$54</td>
+                    <td>$154 <span class="profit-percentage">16%</span></td>
+                    <td><span class="status confirmed">Confirmed</span></td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+
+              <br>
+              <!-- Pagination -->
+              
+              <div class="pagination">
+                <div class="pagination-info">
+                  Showing 
+                  <select class="rows-select">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                  </select> 
+                  of 50
+                </div>
+                <div class="pagination-buttons">
+                  <button class="pagination-btn">&laquo;</button>
+                  <button class="pagination-btn active">1</button>
+                  <button class="pagination-btn">2</button>
+                  <button class="pagination-btn">3</button>
+                  <button class="pagination-btn">4</button>
+                  <button class="pagination-btn">5</button>
+                  <button class="pagination-btn">&raquo;</button>
+                </div>
+              </div>
+              
+
+
+
+
+
+
+            </div>
+            
+
+
+
+
+
+          </div>
+          
+        </div>
+
+      
+<br>
+
+       
+
+
+
+      </div>
+    </section>
+
+
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".order-tab");
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      tabs.forEach((t) => t.classList.remove("active"));
+      tab.classList.add("active");
+    });
+  });
+});
+
+    </script>
+
+
+
+
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const paginationButtons = document.querySelectorAll(".pagination-btn");
+    
+        paginationButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            // Remove active class from all buttons
+            paginationButtons.forEach((btn) => btn.classList.remove("active"));
+            // Add active class to the clicked button
+            button.classList.add("active");
+          });
+        });
+      });
+    </script>
+    
+
+
+
+
+
+
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Add dropdown interaction
+        document.querySelectorAll(".status").forEach((element) => {
+          const status = element.textContent.trim().toLowerCase();
+          switch (status) {
+            case "pending":
+              element.style.backgroundColor = "#FFC60029";
+              break;
+            case "confirmed":
+              element.style.backgroundColor = "#c7ebadba";
+              break;
+            case "processing":
+              element.style.backgroundColor = "#dfedf4";
+              break;
+            case "picked":
+              element.style.backgroundColor = "#8a2be2";
+              break;
+            case "shipped":
+              element.style.backgroundColor = "purple";
+              break;
+            case "delivered":
+              element.style.backgroundColor = "dodgerblue";
+              break;
+            default:
+              element.style.backgroundColor = "#000";
+          }
+        });
+      });
+    </script>
+    
+
+    
+
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".sidebarBtn");
+      sidebarBtn.onclick = function () {
+        sidebar.classList.toggle("active");
+        if (sidebar.classList.contains("active")) {
+          sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+        } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+      };
+    </script>
+  </body>
+</html>
