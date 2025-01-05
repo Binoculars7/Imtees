@@ -1,5 +1,5 @@
 <?php
-include "config.php";
+include "../config.php";
 
 // Get JSON data from the request
 $input = file_get_contents("php://input");

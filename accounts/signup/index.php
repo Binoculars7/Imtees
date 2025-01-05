@@ -22,7 +22,7 @@
             </a> -->
             
             <div id="g_id_onload"
-         data-client_id="YOUR_CLIENT_ID"
+         data-client_id="1080576136500-um163d5rivtckbg994glt1pg5p625abs.apps.googleusercontent.com"
          data-context="signup"
          data-ux_mode="popup"
          data-callback="handleCredentialResponse"
@@ -43,7 +43,7 @@
             const data = JSON.parse(atob(response.credential.split('.')[1]));
 
             // Send data to your server
-            fetch('../google-signup.php', {
+            fetch('google-callback.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
