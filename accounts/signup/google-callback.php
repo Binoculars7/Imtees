@@ -22,6 +22,7 @@ if ($result->num_rows > 0) {
     $sql = "INSERT INTO signup (FNAME, EMAIL, PASS, DATES) VALUES ('$fname', '$email', '', '$date')";
 
     if ($conn->query($sql) === TRUE) {
+        $_SESSION['email'] = $email;
         echo "Account created successfully with Google!";
     } else {
         echo "Error: " . $conn->error;

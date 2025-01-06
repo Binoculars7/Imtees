@@ -1,4 +1,8 @@
+<?php
 
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,6 +99,7 @@ if (isset($_POST['submit'])) {
 
             if ($conn->query($sql) === TRUE) {
                 echo "<div style='color:blue; font-size:14px;'>Account created successfully!</div>";
+                $_SESSION['email'] = $email;
             } else {
                 echo "<div style='color:red; font-size:14px;'>Error: " . $conn->error."</div>";
             }

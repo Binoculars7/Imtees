@@ -26,7 +26,9 @@ if ($result->num_rows > 0) {
          // New user, insert them into the database
         $insertQuery = "INSERT INTO signup (FNAME, EMAIL, PASS, DATES) VALUES ('$fname', '$email', '$google_id', '$date')";
         if ($conn->query($insertQuery) === TRUE) {
+            $_SESSION['email'] = $email;
             echo "Account created and logged in successfully. Welcome, $fname!";
+            
         } else {
             echo "Error: " . $conn->error;
         }

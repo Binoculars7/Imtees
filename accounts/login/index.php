@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,6 +88,7 @@ if (isset($_POST['submit'])) {
             echo "<div style='color:blue; font-size:14px;'>Login successful. Welcome, " . $user['FNAME'] . "!</div>";
             // Redirect to dashboard or home page
             // header("Location: dashboard.php");
+            $_SESSION['email'] = $email;
         } else {
             echo "<div style='color:red; font-size:14px;'>Incorrect password.</div>";
         }
@@ -103,7 +108,7 @@ if (isset($_POST['submit'])) {
                     <button type="button" class="toggle-password" style="margin-top:-0.3em"><i class="fa fa-eye-slash"></i></button>
                 </div>
                 <label>
-                    <a href="#">Forgot Password?</a> 
+                    <a href="../reset-password">Forgot Password?</a> 
                 </label>
                 <button name="submit" type="submit" class="submit-button">Sign In</button>
             </form>

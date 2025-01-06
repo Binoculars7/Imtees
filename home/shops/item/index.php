@@ -1,3 +1,15 @@
+<?php
+session_start();
+$sense_email = $_SESSION['email'];
+if ($sense_email == "") {
+  echo "No email found!";
+}else {
+  echo $sense_email;
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,10 +41,10 @@
       <!-- Navigation Links -->
       <nav class="menu-nav">
         <ul class="nav-links">
-          <li><a href="#" class="nav-link"><b>Home</b></a></li>
-          <li><a href="#" class="nav-link active"><b>Shops</b></a></li>
-          <li><a href="#" class="nav-link"><b>How it works</b></a></li>
-          <li><a href="#" class="nav-link"><b>Store</b></a></li>
+        <li><a href="../../" class="nav-link"><b>Home</b></a></li>
+          <li><a href="../../shops" class="nav-link active"><b>Shops</b></a></li>
+          <li><a href="../../how-it-works" class="nav-link"><b>How it works</b></a></li>
+          <li><a href="../../../store" class="nav-link"><b>Store</b></a></li>
         </ul>
       </nav>
     
@@ -76,16 +88,64 @@
 
 
 
+
+
+  <?php
+include "../config.php";
+
+$product_id = $_GET['id'];
+
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT ID, NAME, CATEGORY, DESCRIPTION, PRICE, DATES, EMAIL FROM items WHERE ID='$product_id'";
+$result = $conn->query($sql);
+
+$productData = [];
+if ($result->num_rows > 0) {
+   $row = $result->fetch_array();
+    $id = $row['ID'];
+
+    if ($id == $product_id) {
+      $name = $row['NAME'];
+    $category = $row['CATEGORY'];
+    $description = $row['DESCRIPTION'];
+    $price = $row['PRICE'];
+    $dates = $row['DATES'];
+    $email = $row['EMAIL'];  
+    }else{
+      $name = "Empty ID";
+    $category = "Empty ID";
+    $description = "Empty ID";
+    $price = "Empty ID";
+    $dates = "Empty ID";
+    $email = "Empty ID";
+    }
+
+    
+        // <div><a href='#' class='minus'>-</a><a href='#' class='num'>1</a><a href='#' class='plus'>+</a></div>      
+} else {
+    //echo "No records found.";
+    exit;
+}
+?>
+
+
+
+
+
     <div class="cart-product">
 
      
       <div id="uniqueCart_container">
         <div id="uniqueCart_imageContainer">
-          <img src="../images/cloth2.png" alt="T-Shirt" id="uniqueCart_productImage">
+          <img src="../images/<?php echo $name;?>" alt="T-Shirt" id="uniqueCart_productImage">
         </div>
         <div id="uniqueCart_detailsContainer">
-          <h2 id="uniqueCart_productName">Round Neck for Weekends</h2>
-          <p id="uniqueCart_designer">Designed by <span>Monk Walter</span></p>
+          <h2 id="uniqueCart_productName"><?php echo $description;?></h2>
+          <p id="uniqueCart_designer">Designed by <span><?php echo $email;?></span></p>
     
           <!-- Color Selection -->
           <div id="uniqueCart_colorContainer">
@@ -113,7 +173,7 @@
           </div>
     
           <!-- Price and Quantity -->
-          <p id="uniqueCart_price">$20.08</p>
+          <p id="uniqueCart_price">$<?php echo $price;?></p>
           <div id="uniqueCart_quantityContainer">
             <button id="uniqueCart_decreaseQty">-</button>
             <span id="uniqueCart_quantity">1</span>

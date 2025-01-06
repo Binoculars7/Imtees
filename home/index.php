@@ -107,8 +107,8 @@
           </ul>
 
           <div class="ml-auto">
-            <a href="#" class="btn btn-primary" style="padding: 0.4em 1.8em; border-radius: 12px;"><small><span class="mai-rocket-outline"></span> Create Now</small></a> 
-            <a href="#" class="btn btn-outline" style="padding: 0.4em 2.6em; border-radius: 12px;"><small>Login</small></a>
+            <a href="../accounts/signup/" class="btn btn-primary" style="padding: 0.4em 1.8em; border-radius: 12px;"><small><span class="mai-rocket-outline"></span> Create Now</small></a> 
+            <a href="../accounts/login/" class="btn btn-outline" style="padding: 0.4em 2.6em; border-radius: 12px;"><small>Login</small></a>
           </div>
         </div>
       </div>
@@ -123,8 +123,8 @@
 
             
             
-            <a href="#" class="btn btn-primary ml-2" style="border-radius: 11px;"><span class="mai-rocket"></span> Create Now </a>
-            <a href="#" class="btn btn-primary ml-2"  style="border-radius: 11px; background: #EEDEFF; color: #700FDC; border-color: #700FDC;"><span class="mai-cart"></span> Shop Now </a>
+            <a href="../accounts/signup/" class="btn btn-primary ml-2" style="border-radius: 11px;"><span class="mai-rocket"></span> Create Now </a>
+            <a href="../home/shops/" class="btn btn-primary ml-2"  style="border-radius: 11px; background: #EEDEFF; color: #700FDC; border-color: #700FDC;"><span class="mai-cart"></span> Shop Now </a>
           </div>
           <div class="col-lg-6 py-3 wow zoomIn">
             <div class="img-place">
