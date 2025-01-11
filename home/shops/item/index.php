@@ -28,6 +28,7 @@ if ($sense_email == "") {
   <link rel="stylesheet" href="../../assets/css/bootstrap.css">
 
   <link rel="stylesheet" href="../../assets/css/maicons.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
@@ -87,14 +88,19 @@ if ($sense_email == "") {
   <div class="container">
 
 
-
-
-
   <?php
 include "../config.php";
 
+$product_ids = isset($_GET['id']);
+//echo $product_ids;
+
+if ($product_ids == "" || $_GET['id'] == "") {
+  header("location: ../");
+}
+
 $product_id = $_GET['id'];
 
+$_SESSION['product_id'] = $product_id;
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -148,14 +154,15 @@ if ($result->num_rows > 0) {
           <p id="uniqueCart_designer">Designed by <span><?php echo $email;?></span></p>
     
           <!-- Color Selection -->
+<form id="uniqueCart_form" method="POST">
           <div id="uniqueCart_colorContainer">
             <p>Color:</p>
             <div class="uniqueCart_colorOptions">
-              <button class="uniqueCart_color uniqueCart_black selected" data-color="Black"></button>
-              <button class="uniqueCart_color uniqueCart_white" data-color="White"></button>
-              <button class="uniqueCart_color uniqueCart_red" data-color="Red"></button>
-              <button class="uniqueCart_color uniqueCart_yellow" data-color="Yellow"></button>
-              <button class="uniqueCart_color uniqueCart_teal" data-color="Teal"></button>
+              <button type="button" class="uniqueCart_color uniqueCart_black selected" data-color="Black"></button>
+              <button type="button" class="uniqueCart_color uniqueCart_white" data-color="White"></button>
+              <button type="button" class="uniqueCart_color uniqueCart_red" data-color="Red"></button>
+              <button type="button" class="uniqueCart_color uniqueCart_yellow" data-color="Yellow"></button>
+              <button type="button" class="uniqueCart_color uniqueCart_teal" data-color="Teal"></button>
             </div>
           </div>
     
@@ -163,27 +170,105 @@ if ($result->num_rows > 0) {
           <div id="uniqueCart_sizeContainer">
             <p>Size:</p>
             <div class="uniqueCart_sizes">
-              <button class="uniqueCart_size" data-size="S">S</button>
-              <button class="uniqueCart_size" data-size="M">M</button>
-              <button class="uniqueCart_size" data-size="L">L</button>
-              <button class="uniqueCart_size" data-size="XL">XL</button>
-              <button class="uniqueCart_size" data-size="XXL">XXL</button>
-              <button class="uniqueCart_size" data-size="XXXL">XXXL</button>
+              <button type="button" class="uniqueCart_size" data-size="S">S</button>
+              <button type="button" class="uniqueCart_size" data-size="M">M</button>
+              <button type="button" class="uniqueCart_size" data-size="L">L</button>
+              <button type="button" class="uniqueCart_size" data-size="XL">XL</button>
+              <button type="button" class="uniqueCart_size" data-size="XXL">XXL</button>
+              <button type="button" class="uniqueCart_size" data-size="XXXL">XXXL</button>
             </div>
           </div>
     
           <!-- Price and Quantity -->
           <p id="uniqueCart_price">$<?php echo $price;?></p>
           <div id="uniqueCart_quantityContainer">
-            <button id="uniqueCart_decreaseQty">-</button>
+            <button type="button" id="uniqueCart_decreaseQty">-</button>
             <span id="uniqueCart_quantity">1</span>
-            <button id="uniqueCart_increaseQty">+</button>
+            <button type="button" id="uniqueCart_increaseQty">+</button>
           </div>
           
           <!-- Add to Cart -->
-          <button id="uniqueCart_addToCart">Add to Cart</button>
+          <button type="button" id="uniqueCart_addToCart">Add to Cart</button>
+
+</form>
+
+
+
+
+<script>
+$(document).ready(function(){
+    let selectedColor = 'Black'; // Default color
+    let selectedSize = 'M'; // Default size
+    let quantity = 1; // Default quantity
+
+    // Color selection handler
+    $('.uniqueCart_color').click(function(){
+        selectedColor = $(this).data('color');
+        $('.uniqueCart_color').removeClass('selected');
+        $(this).addClass('selected');
+    });
+
+    // Size selection handler
+    $('.uniqueCart_size').click(function(){
+        selectedSize = $(this).data('size');
+        $('.uniqueCart_size').removeClass('selected');
+        $(this).addClass('selected');
+    });
+
+    // Quantity increase/decrease
+    $('#uniqueCart_increaseQty').click(function(){
+        quantity++;
+        $('#uniqueCart_quantity').text(quantity);
+    });
+
+    $('#uniqueCart_decreaseQty').click(function(){
+        if (quantity > 1) {
+            quantity--;
+            $('#uniqueCart_quantity').text(quantity);
+        }
+    });
+
+    // Add to Cart button click
+    $('#uniqueCart_addToCart').click(function(){
+        $.ajax({
+            url: 'process_cart.php',
+            type: 'POST',
+            data: {
+                color: selectedColor,
+                size: selectedSize,
+                quantity: quantity
+            },
+            success: function(response) {
+                var result = JSON.parse(response);
+                if (result.status === 'success') {
+                    alert(result.message);
+                    window.location.href = 'cart/';
+                } else {
+                    alert(result.message);
+                }
+            },
+            error: function() {
+                alert('Error adding item to cart');
+            }
+        });
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
         </div>
       </div>
+
+  
     
 
     </div>
