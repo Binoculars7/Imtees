@@ -1,11 +1,29 @@
 <?php
+// Start the session at the very top of the script
 session_start();
-$sense_email = $_SESSION['email'];
-if ($sense_email == "") {
-  echo "No email found!";
-}else {
-  echo $sense_email;
+
+// Check if the 'email' key exists in the session
+if (isset($_SESSION['email']) && $_SESSION['email'] != "") {
+    //echo "Email: " . htmlspecialchars($_SESSION['email']);
+    $s_email = $_SESSION['email'];
+} else {
+  $_SESSION['email'] = 0;
 }
+
+
+
+$sense_emails = isset($_GET['email']);
+//echo $sense_email;
+
+if ($sense_emails == "" || $_GET['email'] == "") {
+ // header("location: ../");
+ $sense_email = "SELECT ID, NAME, CATEGORY, DESCRIPTION, PRICE, DATES, EMAIL FROM items";
+}else{
+  $doe = $_GET['email'];
+  $sense_email = "SELECT ID, NAME, CATEGORY, DESCRIPTION, PRICE, DATES, EMAIL FROM items WHERE EMAIL='$doe'";
+  
+}
+
 
 ?>
 
@@ -19,7 +37,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT ID, NAME, CATEGORY, DESCRIPTION, PRICE, DATES, EMAIL FROM items WHERE EMAIL='$sense_email'";
+$sql = $sense_email;
 $result = $conn->query($sql);
 
 $productData = [];
@@ -126,8 +144,29 @@ if ($result->num_rows > 0) {
           </button>
         </div>
         <div class="action-icons">
-          <a href="#" class="cart-icon">
+          <a href="item/cart/" class="cart-icon">
             <i class="fas fa-shopping-cart"></i>
+            <small><span style="color:white; background:red; margin-top:0em; margin-left:-1em; position:absolute; border-radius:50%; font-size:12px; font-weight:bold; padding:0em 0.45em 0.15em 0.45em;"><small>
+            <?php
+include "config.php";
+
+if (!isset($_SESSION['order_id'])) {
+  echo 0;
+}else{
+  $order_id = $_SESSION['order_id'];
+
+// Fetch data from the database
+$sql = "SELECT `ID`, `NAME`, `SIZE`, `QTY`, `PRODUCT_ID`, `ORDER_ID`, `PRICE`, `IMAGE_URL` 
+        FROM `addcart` 
+        WHERE `ORDER_ID` = '$order_id'";
+$query = mysqli_query($conn, $sql);
+
+// Initialize total amount
+echo mysqli_num_rows($query);
+}
+
+?>
+            </small></span></small>
           </a>
           <a href="#" class="heart-icon">
             <i class="fas fa-heart"></i>
@@ -245,7 +284,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT ID, NAME, CATEGORY, DESCRIPTION, PRICE, DATES, EMAIL FROM items WHERE EMAIL='$sense_email'";
+$sql = $sense_email;
 $result = $conn->query($sql);
 
 $productData = [];

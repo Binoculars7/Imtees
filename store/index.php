@@ -1,3 +1,17 @@
+<?php
+// Start the session at the very top of the script
+session_start();
+
+// Check if the 'email' key exists in the session
+if (isset($_SESSION['email']) && $_SESSION['email'] != "") {
+    //echo "Email: " . htmlspecialchars($_SESSION['email']);
+    $s_email = $_SESSION['email'];
+} else {
+  $_SESSION['email'] = 0;
+}
+
+//echo $_SESSION['email'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,7 +107,7 @@
         <div class="navbar-collapse collapse" id="navbarContent">
           <ul class="navbar-nav ml-lg-4 pt-3 pt-lg-0">
             <li class="nav-item">
-              <a href="../home" id="activer" class="nav-link">Home</a>
+              <a href="../home" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
               <a href="../home/shops/" class="nav-link">Shops</a>
@@ -102,7 +116,7 @@
               <a href="../home/how-it-works/" class="nav-link">How it works</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Store</a>
+              <a href="#" id="activer" class="nav-link">Store</a>
             </li>
           </ul>
 
