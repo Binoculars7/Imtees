@@ -1,3 +1,18 @@
+<?php
+// Start the session at the very top of the script
+session_start();
+
+// Check if the 'email' key exists in the session
+if (isset($_SESSION['email']) && $_SESSION['email'] != "") {
+    //echo "Email: " . htmlspecialchars($_SESSION['email']);
+    $s_email = $_SESSION['email'];
+} else {
+  $_SESSION['email'] = 0;
+}
+
+//echo $_SESSION['email'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,29 +29,33 @@
       <h2 class="store-title"><br>
         <img src="../../home/assets/img/logo.png" width="50px" alt=""><p><br>My New Store</p> 
       </h2><br>
-      <ul class="menu"><a href="http://" style="">
+      <ul class="menu"><a href="" style="text-decoration: none;">
         <li class="menu-item active">
           <i class="fa-solid fa-house"></i> Dashboard
-        </li></a>
+        </li></a><a href="" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-list"></i> Catalogs
-        </li>
+        </li></a><a href="" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-wallet"></i> Wallet
-        </li>
+        </li></a><a href="" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-box"></i> Orders
-        </li>
+        </li></a><a href="" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-boxes-stacked"></i> My Products
-        </li>
+        </li></a><a href="" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-gear"></i> Store Settings
-        </li>
+        </li></a>
       </ul>
       <div class="account">
         <p><i class="fa-solid fa-user"></i> Account</p>
-        <p class="mailer">orderimtees@gmail.com</p>
+        <p class="mailer"><?php if ($_SESSION['email'] != 0) {
+          echo $_SESSION['email']; 
+        }else{
+          echo '-';
+        } ?></p>
       </div>
     </aside>
 
@@ -53,7 +72,7 @@
       <div class="imtees-store">
         <h2>IMTees <span style="font-size: 10px; font-weight: normal;">Store</span></h2>
         <p>Make a sale now. Simply share a special link with your friends, family, and followers; there's no need to build a website.</p>
-        <button class="launch-btn"><i class="fa-solid fa-link"></i> Launch store</button>
+       <a href="set-up/"> <button class="launch-btn"><i class="fa-solid fa-link"></i> Launch store</button></a>
       </div><br>
       <p class="subheading">Do you currently have a sales channel? Connect your store now.</p>
       <p style="margin-top: -30px;">Choose a sales channel below to connect your store.</p><br><br>

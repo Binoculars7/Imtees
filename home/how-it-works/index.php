@@ -1,3 +1,18 @@
+<?php
+// Start the session at the very top of the script
+session_start();
+
+// Check if the 'email' key exists in the session
+if (isset($_SESSION['email']) && $_SESSION['email'] != "") {
+    //echo "Email: " . htmlspecialchars($_SESSION['email']);
+    $s_email = $_SESSION['email'];
+} else {
+  $_SESSION['email'] = 0;
+}
+
+//echo $_SESSION['email'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -107,8 +122,14 @@
           </ul>
 
           <div class="ml-auto">
-            <a href="../../accounts/signup/" class="btn btn-primary" style="padding: 0.4em 1.8em; border-radius: 12px;"><small><span class="mai-rocket-outline"></span> Create Now</small></a> 
-            <a href="../../accounts/login/" class="btn btn-outline" style="padding: 0.4em 2.6em; border-radius: 12px;"><small>Login</small></a>
+          <?php
+            if ($_SESSION['email'] != 0) {
+              echo '<a href="../../store/dashboard/" class="btn btn-primary" style="padding: 0.4em 1.8em; border-radius: 12px;"><small><span class="mai-rocket-outline"></span> Start Now</small></a>';
+            }else{
+              echo ' <a href="../../accounts/signup/" class="btn btn-primary" style="padding: 0.4em 1.8em; border-radius: 12px;"><small><span class="mai-rocket-outline"></span> Signup</small></a> 
+            <a href="../../accounts/login/" class="btn btn-outline" style="padding: 0.4em 2.6em; border-radius: 12px;"><small>Login</small></a>';
+            }
+            ?>
           </div>
         </div>
       </div>
@@ -122,8 +143,14 @@
             <p class="text-ls mb-5" style="width: 90%; font-size: 18px;">Easily create, sell, and manage your custom products on popular e-commerce platforms</p>
 
             
-            
-            <a href="../../accounts/signup/" class="btn btn-primary ml-2" style="border-radius: 11px; margin-top: -2em;"><span class="mai-rocket"></span> Start Now </a>
+            <?php
+            if ($_SESSION['email'] != 0) {
+              echo '<a href="../../store/dashboard/" class="btn btn-primary ml-2" style="border-radius: 11px;"><span class="mai-rocket"></span> Start Now </a>';
+            }else{
+              echo '<a href="../../accounts/signup/" class="btn btn-primary ml-2" style="border-radius: 11px;"><span class="mai-rocket"></span> Signup </a>';
+            }
+            ?>
+
             <div style="margin-top: 0.5em;">
               100% Free &#8226; Easy to Use &#8226; 100+ Product
             </div>

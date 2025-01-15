@@ -121,8 +121,15 @@ if (isset($_SESSION['email']) && $_SESSION['email'] != "") {
           </ul>
 
           <div class="ml-auto">
-            <a href="../accounts/signup/" class="btn btn-primary" style="padding: 0.4em 1.8em; border-radius: 12px;"><small><span class="mai-rocket-outline"></span> Create Now</small></a> 
-            <a href="../accounts/login/" class="btn btn-outline" style="padding: 0.4em 2.6em; border-radius: 12px;"><small>Login</small></a>
+          <?php
+            if ($_SESSION['email'] != 0) {
+              echo '<a href="dashboard/" class="btn btn-primary" style="padding: 0.4em 1.8em; border-radius: 12px;"><small><span class="mai-rocket-outline"></span> Create Now</small></a>';
+            }else{
+              echo ' <a href="../accounts/signup/" class="btn btn-primary" style="padding: 0.4em 1.8em; border-radius: 12px;"><small><span class="mai-rocket-outline"></span> Signup</small></a> 
+            <a href="../accounts/login/" class="btn btn-outline" style="padding: 0.4em 2.6em; border-radius: 12px;"><small>Login</small></a>';
+            }
+            ?>
+           
           </div>
         </div>
       </div>
@@ -135,9 +142,14 @@ if (isset($_SESSION['email']) && $_SESSION['email'] != "") {
             <h1 class="mb-4" style="font-weight: bold; font-size: 35px; line-height: 1.3;">Launch your sales instantly using <span style="color: #700FDC;">Imtees</span> Store.</h1>
             <p class="text-ls mb-5" style="width: 90%; font-size: 18px;">Boost your profits and sell custom merch with your own unique store link — all at no cost.</p>
 
-            
-            
-            <a href="../accounts/signup/" class="btn btn-primary ml-2" style="border-radius: 11px; margin-top: -1em; margin-bottom: 1em;"><span class="mai-rocket"></span> Create Now </a>
+            <?php
+            if ($_SESSION['email'] != 0) {
+              echo '<a href="dashboard/" class="btn btn-primary ml-2" style="border-radius: 11px; margin-top: -1em; margin-bottom: 1em;"><span class="mai-rocket"></span> Create Now </a>';
+            }else{
+              echo '<a href="../accounts/signup/" class="btn btn-primary ml-2" style="border-radius: 11px; margin-top: -1em; margin-bottom: 1em;"><span class="mai-rocket"></span> Create Now </a>';
+            }
+            ?>
+
             <p><img src="heads.PNG" width="150px" alt=""></p>
           </div>
           <div class="col-lg-6 py-3 wow zoomIn">
