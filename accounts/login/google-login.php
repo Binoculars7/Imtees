@@ -18,6 +18,7 @@ $result = $conn->query($query);
 if ($result->num_rows > 0) {
     // User exists, log them in
     echo "Login successful. Welcome back, $fname!";
+    header("Location: ../../home/shops/");
 } else {
 
     if ($fname == "" || $email == "") {
@@ -28,6 +29,7 @@ if ($result->num_rows > 0) {
         if ($conn->query($insertQuery) === TRUE) {
             $_SESSION['email'] = $email;
             echo "Account created and logged in successfully. Welcome, $fname!";
+            header("Location: ../../home/shops/");
             
         } else {
             echo "Error: " . $conn->error;

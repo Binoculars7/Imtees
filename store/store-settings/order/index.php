@@ -15,29 +15,28 @@
   <div class="container">
     <!-- Sidebar -->
     <aside class="sidebar">
-      <h2 class="store-title"><br>
+      <h2 class="store-title" style="text-align:center;"><br>
         <img src="../../home/assets/img/logo.png" width="50px" alt=""><p><br>My New Store</p> 
       </h2><br>
-      <ul class="menu">
-        <li class="menu-item active">
+      <ul class="menu"><a href="../../dashboard" style="text-decoration: none;">
+        <li class="menu-item">
           <i class="fa-solid fa-house"></i> Dashboard
-        </li>
+        </li></a><a href="#" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-wallet"></i> Wallet
-        </li>
+        </li></a><a href="../../orders" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-box"></i> Orders
-        </li>
+        </li></a><a href="../../my-products" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-boxes-stacked"></i> My Products
-        </li>
-        <li class="menu-item">
+        </li></a><a href="../" style="text-decoration: none;">
+        <li class="menu-item active">
           <i class="fa-solid fa-gear"></i> Store Settings
-        </li>
+        </li></a>
       </ul>
       <div class="account">
-        <p><i class="fa-solid fa-user"></i> Account</p>
-        <p class="mailer">orderimtees@gmail.com</p>
+        
       </div>
     </aside>
 
@@ -54,8 +53,8 @@
         
         
         <div class="unique-tabs">
-          <button class="unique-tab active">Store Name</button>
-          <button class="unique-tab" id="hhh">Order Settings</button>
+          <button class="unique-tab" id="hhh">Store Name</button>
+          <button class="unique-tab active">Order Settings</button>
           <button class="unique-tab">Connects</button>
           <button class="unique-tab">Shipping Profiles</button>
         </div>
@@ -65,18 +64,50 @@
       
       
       <br>
-      <div class="unique-store-name">
-        <h2 class="store-title">Store Name</h2>
-        <p class="store-description">
-          Your store name will be shown on the ship from field on shipping labels
-        </p><br>
-        <label for="store-input" class="store-label">Type in your Store name</label>
-        <input type="text" id="store-input" class="store-input" placeholder="Input your name" />
-        <div class="store-actions">
-          <button class="cancel-btn">Cancel</button>
-          <button class="save-btn">Save</button>
+      
+
+      <div class="ship-from-address">
+        <h2 class="address-title">Ship from Address</h2>
+        <p class="address-description">
+          Brand your packaging by adding your company address and a phone number
+        </p>
+      
+        <div class="address-tab">
+          <span class="address-tab-label">US address</span>
+        </div>
+      
+        <p class="address-subtitle">Address for shipments from the United States</p>
+      
+        <div class="address-options">
+          <label class="address-option">
+            <input type="radio" name="address" class="address-radio" checked />
+            <span class="option-label">Imtees default</span>
+            <span class="option-description">
+              The return address will be the location where the product was printed
+            </span>
+          </label>
+      
+          <label class="address-option">
+            <input type="radio" name="address" class="address-radio" />
+            <span class="option-label">Custom address</span>
+            <span class="option-description">
+              Must be a valid United State address
+            </span>
+          </label>
+        </div>
+      
+        <div class="address-actions">
+          <a href=""><button class="cancel-btn">Cancel</button></a>
+          <button onclick="alertme()" id="save-btnn" class="save-btn">Save</button>
         </div>
       </div>
+
+      <script>
+        function alertme() {
+          alert('Your setting is updated');
+        }
+      </script>
+      
       
 
 
@@ -122,9 +153,9 @@ document.querySelectorAll('.unique-tab').forEach((tab) => {
 <script>
  document.getElementById('hhh').addEventListener('click', function() {
     // Redirect to the desired page
-    window.location.href = 'order';
+    window.location.href = '../';
 });
-</script>
+</script> 
 
 
   

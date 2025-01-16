@@ -7,7 +7,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="turn.css">
-  <link rel="stylesheet" href="fav.css">
+  <link rel="stylesheet" href="settings.css">
 </head>
 
 
@@ -15,29 +15,28 @@
   <div class="container">
     <!-- Sidebar -->
     <aside class="sidebar">
-      <h2 class="store-title"><br>
-        <img src="../../../home/assets/img/logo.png" width="50px" alt=""><p><br>My New Store</p> 
+      <h2 class="store-title" style="text-align:center;"><br>
+        <img src="../../home/assets/img/logo.png" width="50px" alt=""><p><br>My New Store</p> 
       </h2><br>
-      <ul class="menu">
-        <li class="menu-item active">
+      <ul class="menu"><a href="../dashboard" style="text-decoration: none;">
+        <li class="menu-item">
           <i class="fa-solid fa-house"></i> Dashboard
-        </li>
+        </li></a><a href="#" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-wallet"></i> Wallet
-        </li>
+        </li></a><a href="../orders" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-box"></i> Orders
-        </li>
+        </li></a><a href="../my-products" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-boxes-stacked"></i> My Products
-        </li>
-        <li class="menu-item">
+        </li></a><a href="" style="text-decoration: none;">
+        <li class="menu-item active">
           <i class="fa-solid fa-gear"></i> Store Settings
-        </li>
+        </li></a>
       </ul>
       <div class="account">
-        <p><i class="fa-solid fa-user"></i> Account</p>
-        <p class="mailer">orderimtees@gmail.com</p>
+       
       </div>
     </aside>
 
@@ -49,46 +48,46 @@
     <!-- Main Content -->
     <main class="content"><br><br>
     
- 
-
-
-      <div class="header">
-        <div class="header-item">
-            <span>Ship from</span>
-            <div class="dropdown" style="margin-left: 3em;">
-                <i class="fas fa-flag-usa" style="margin-right: 2em;"></i> <!-- Flag Icon -->
-                <span>USA</span>
-                <i class="fas fa-caret-down arrow"></i>
-            </div>
+        
+      <div id="unique-container">
+        
+        
+        <div class="unique-tabs">
+          <button class="unique-tab active">Store Name</button>
+          <button class="unique-tab" id="hhh">Order Settings</button>
+          <button class="unique-tab">Connects</button>
+          <button class="unique-tab">Shipping Profiles</button>
         </div>
-        <div class="header-item">
-            <span>Currency</span>
-            <div class="dropdown" style="margin-left: 3em;">
-                <span>USD</span>
-                <i class="fas fa-caret-down arrow"></i>
-            </div>
-        </div>
-    </div>
-    <div class="search-bar">
-        <input type="text" placeholder="Search for product...">
-        <button><i class="fas fa-search"></i></button>
-    </div>
-    <div class="breadcrumb">
-        <span>Catalog</span> / <span>My Favorites</span>
-    </div>
-    <h1>My Favorites</h1>
-    
+      </div>
+
+      <br>
       
-     <br>
+      
+      <br>
+      <div class="unique-store-name">
+        <h2 class="store-title">Store Name</h2>
+        <p class="store-description">
+          Your store name will be shown on the ship from field on shipping labels
+        </p><br>
+        <label for="store-input" class="store-label">Type in your Store name</label>
+        <input type="text" id="store-input" class="store-input" placeholder="Input your name" />
+        <div class="store-actions">
+          <a href=""><button class="cancel-btn">Cancel</button></a>
+          <button onclick="alertme()"  class="save-btn">Save</button>
+        </div>
+      </div>
+      
 
+      <script>
+        function alertme() {
+          alert('Your setting is updated');
+        }
+      </script>
 
-     <div class="unique-no-favorites">
-      <p class="message">
-        You have not added any favorite yet. Browse products and click the <br> heart icon to add a product to your favorites
-      </p>
-      <button class="browse-btn">Browse Products</button>
-    </div>
-    
+      
+
+      
+     
         
 
 
@@ -122,12 +121,15 @@ document.querySelectorAll('.unique-tab').forEach((tab) => {
 </script>
 
 
+
 <script>
-  document.getElementById('hhh').addEventListener('click', function() {
+ document.getElementById('hhh').addEventListener('click', function() {
     // Redirect to the desired page
-    window.location.href = '../';
+    window.location.href = 'order';
 });
 </script>
+
+
   
 </body>
 </html>

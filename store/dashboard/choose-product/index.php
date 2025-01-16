@@ -1,3 +1,22 @@
+<?php
+// Start the session at the very top of the script
+session_start();
+
+// Check if the 'email' key exists in the session
+if (isset($_SESSION['email']) && $_SESSION['email'] != "") {
+    //echo "Email: " . htmlspecialchars($_SESSION['email']);
+    $s_email = $_SESSION['email'];
+} else {
+  $_SESSION['email'] = 0;
+}
+
+$email = $_SESSION['email'];
+if ($email == 0) {
+  echo "<script>window.location.href = '../../../accounts/login';</script>";
+}else{
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,29 +29,36 @@
   <div class="container">
     <div class="header">
       <img src="../../../home/assets/img/logo.png" alt="Logo" class="logo">
-      <h1>Choose your Product</h1>
+    <a href="../create" style="text-decoration:none; color:#700FDC;padding:0.2em 0.7em; border-radius:20px;">Go Back</a>  <h1>Choose your Product</h1>
     </div>
-    <div class="buttons">
-      <button class="product-btn active" data-product="youth-tshirt">Youth tshirt</button>
-      <button class="product-btn" data-product="crewneck">Crewneck</button>
-      <button class="product-btn" data-product="kid-tees">Kid tees</button>
-      <button class="product-btn" data-product="long-sleeve">Long sleeve</button>
-      <button class="product-btn" data-product="adult-tshirt">Adult tshirt</button>
-      <button class="product-btn" data-product="tank-top">Tank Top</button>
-    </div>
+    
+      <div class="buttons">
+        <button name="youth-tshirt" class="product-btn active" data-product="youth-tshirt">Youth tshirt</button>
+        <button name="crewneck" class="product-btn" data-product="crewneck">Crewneck</button>
+        <button name="kid-tees" class="product-btn" data-product="kid-tees">Kid tees</button>
+        <button name="long-sleeve" class="product-btn" data-product="long-sleeve">Long sleeve</button>
+        <button name="adult-tshirt" class="product-btn" data-product="adult-tshirt">Adult tshirt</button>
+        <button name="tank-top" class="product-btn" data-product="tank-top">Tank Top</button>
+      </div>
+    
     <div class="product-preview" id="product-preview">
       <div class="product-card">
         <img src="cloth1.jpg" alt="Youth Tshirt Front">
         <p>Youth tshirt - front</p>
-        <p class="price">USD 2.43</p>
       </div>
       <div class="product-card">
         <img src="cloth2.jpg" alt="Youth Tshirt Back">
         <p>Youth tshirt - back</p>
-        <p class="price">USD 2.43</p>
       </div>
     </div>
+    <br><br><br>
+    <a href="../start-design" style="text-decoration:none;" class="product-btn">Continue</a>
+    <div id="response"></div>
   </div>
+
+
+ 
+
 
   <script>
     // JavaScript to handle button clicks and image updates
@@ -83,7 +109,6 @@
           <div class="product-card">
             <img src="${item.src}" alt="${item.description}">
             <p>${item.description}</p>
-            <p class="price">${item.price}</p>
           </div>
         `).join('');
       });

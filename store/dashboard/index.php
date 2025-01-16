@@ -32,19 +32,16 @@ if (isset($_SESSION['email']) && $_SESSION['email'] != "") {
       <ul class="menu"><a href="" style="text-decoration: none;">
         <li class="menu-item active">
           <i class="fa-solid fa-house"></i> Dashboard
-        </li></a><a href="" style="text-decoration: none;">
-        <li class="menu-item">
-          <i class="fa-solid fa-list"></i> Catalogs
-        </li></a><a href="" style="text-decoration: none;">
+        </li></a><a href="#" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-wallet"></i> Wallet
-        </li></a><a href="" style="text-decoration: none;">
+        </li></a><a href="../orders" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-box"></i> Orders
-        </li></a><a href="" style="text-decoration: none;">
+        </li></a><a href="../my-products" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-boxes-stacked"></i> My Products
-        </li></a><a href="" style="text-decoration: none;">
+        </li></a><a href="../store-settings" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-gear"></i> Store Settings
         </li></a>

@@ -1,3 +1,22 @@
+<?php
+// Start the session at the very top of the script
+session_start();
+
+// Check if the 'email' key exists in the session
+if (isset($_SESSION['email']) && $_SESSION['email'] != "") {
+    //echo "Email: " . htmlspecialchars($_SESSION['email']);
+    $s_email = $_SESSION['email'];
+} else {
+  $_SESSION['email'] = 0;
+}
+
+$email = $_SESSION['email'];
+if ($email == 0) {
+  echo "<script>window.location.href = '../../../accounts/login';</script>";
+}else{
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +28,7 @@
 </head>
 <body>
     <div class="highestv"><img src="../../../home/assets/img/logo.png" width="40px" alt=""></div>
-    <div class="highest"><a href="#"><i class="fa fa-arrow-left"></i></a></div>
+    <div class="highest"><a href="../choose-product"><i class="fa fa-arrow-left"></i></a></div>
     <div class="container">
         <div class="image-section">
             <img src="cloth.png" alt="Black T-shirt">

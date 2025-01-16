@@ -24,6 +24,7 @@ if ($result->num_rows > 0) {
     if ($conn->query($sql) === TRUE) {
         $_SESSION['email'] = $email;
         echo "Account created successfully with Google!";
+        header("Location: ../login");
     } else {
         echo "Error: " . $conn->error;
     }

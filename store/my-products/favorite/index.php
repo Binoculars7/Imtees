@@ -7,7 +7,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="turn.css">
-  <link rel="stylesheet" href="product.css">
+  <link rel="stylesheet" href="fav.css">
 </head>
 
 
@@ -18,22 +18,22 @@
       <h2 class="store-title"><br>
         <img src="../../../home/assets/img/logo.png" width="50px" alt=""><p><br>My New Store</p> 
       </h2><br>
-      <ul class="menu">
-        <li class="menu-item active">
+      <ul class="menu"><a href="../../dashboard" style="text-decoration: none;">
+        <li class="menu-item">
           <i class="fa-solid fa-house"></i> Dashboard
-        </li>
+        </li></a><a href="#" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-wallet"></i> Wallet
-        </li>
+        </li></a><a href="../../orders" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-box"></i> Orders
-        </li>
-        <li class="menu-item">
+        </li></a><a href="../" style="text-decoration: none;">
+        <li class="menu-item active">
           <i class="fa-solid fa-boxes-stacked"></i> My Products
-        </li>
+        </li></a><a href="../../store-settings" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-gear"></i> Store Settings
-        </li>
+        </li></a>
       </ul>
       <div class="account">
         <p><i class="fa-solid fa-user"></i> Account</p>
@@ -49,78 +49,46 @@
     <!-- Main Content -->
     <main class="content"><br><br>
     
-        
-      <div id="unique-container">
-        <div class="unique-header">
-          <h2>My Products</h2>
-          <div class="unique-buttons">
-            <button class="unique-btn" id="favorites">My Favourites</button>
-            <button class="unique-btn" id="visit-store">Visit Store</button>
-            <button class="unique-btn active" id="create-order">Create Order</button>
-          </div>
+ 
+
+
+      <div class="header">
+        <div class="header-item">
+            <span>Ship from</span>
+            <div class="dropdown" style="margin-left: 3em;">
+                <i class="fas fa-flag-usa" style="margin-right: 2em;"></i> <!-- Flag Icon -->
+                <span>USA</span>
+                <i class="fas fa-caret-down arrow"></i>
+            </div>
         </div>
-        <div class="unique-tabs">
-          <button class="unique-tab" id="hhh">My Products</button>
-          <button class="unique-tab">Personalized</button>
-          <button class="unique-tab active">Requires action</button>
+        <div class="header-item">
+            <span>Currency</span>
+            <div class="dropdown" style="margin-left: 3em;">
+                <span>USD</span>
+                <i class="fas fa-caret-down arrow"></i>
+            </div>
         </div>
-      </div>
-      <br>
-      
-      <div class="custom-ui-container">
-        <div class="search-bar">
-          <input type="text" class="custom-search-input" placeholder="Search for product...">
-          <button class="custom-search-button">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-        <div class="filter-options">
-          <select class="custom-dropdown">
-            <option>Print Provider</option>
-          </select>
-          <select class="custom-dropdown">
-            <option>Brand</option>
-          </select>
-          <select class="custom-dropdown">
-            <option>Delivery option</option>
-          </select>
-          <select class="custom-dropdown">
-            <option>Recently Option</option>
-          </select>
-        </div>
-      </div>
-      
-
-
-
-
-      
-<br><br>
-
-      <div class="custom-product-list">
-        <!-- Table Header -->
-        <ul class="list-header">
-          <li>
-            <input type="checkbox" id="select-all" />
-            <label for="select-all">Select all</label>
-          </li>
-          <li>Product</li>
-          <li>Inventory</li>
-          <li>Shipping</li>
-          <li>Status</li>
-          <li></li>
-        </ul>
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search for product...">
+        <button><i class="fas fa-search"></i></button>
+    </div>
+    <div class="breadcrumb">
+        <span>Catalog</span> / <span>My Favorites</span>
+    </div>
+    <h1>My Favorites</h1>
     
       
-        <!-- Duplicate Item Example -->
-        <ul class="product-item">
-          <div style="margin-top: 3.5em; margin-left: 22em; font-size: 18px; color: #B3B3B3;">
-            No item yet
-          </div>
-        </ul>
-      </div>
-      
-     
+     <br>
+
+
+     <div class="unique-no-favorites">
+      <p class="message">
+        You have not added any favorite yet. Browse products and click the <br> heart icon to add a product to your favorites
+      </p>
+      <button class="browse-btn">Browse Products</button>
+    </div>
+    
         
 
 

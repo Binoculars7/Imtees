@@ -10,7 +10,11 @@ if (isset($_SESSION['email']) && $_SESSION['email'] != "") {
   $_SESSION['email'] = 0;
 }
 
-//echo $_SESSION['email'];
+$email = $_SESSION['email'];
+if ($email == 0) {
+  echo "<script>window.location.href = '../../../accounts/login';</script>";
+}else{
+}
 ?>
 
 <!DOCTYPE html>
@@ -94,19 +98,16 @@ if (isset($_SESSION['email']) && $_SESSION['email'] != "") {
       <ul class="menu"><a href="../" style="text-decoration: none;">
         <li class="menu-item active">
           <i class="fa-solid fa-house"></i> Dashboard
-        </li></a><a href="" style="text-decoration: none;">
-        <li class="menu-item">
-          <i class="fa-solid fa-list"></i> Catalogs
-        </li></a><a href="" style="text-decoration: none;">
+        </li></a><a href="#" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-wallet"></i> Wallet
-        </li></a><a href="" style="text-decoration: none;">
+        </li></a><a href="../../orders" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-box"></i> Orders
-        </li></a><a href="" style="text-decoration: none;">
+        </li></a><a href="../../my-products" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-boxes-stacked"></i> My Products
-        </li></a><a href="" style="text-decoration: none;">
+        </li></a><a href="store-settings" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-gear"></i> Store Settings
         </li></a>
@@ -149,7 +150,7 @@ if (isset($_SESSION['email']) && $_SESSION['email'] != "") {
     <div class="form-info">
         <div class="part1">
           <div class="form-titles">Store Name</div>
-          <input name="sname" type="text" placeholder="Store Name">
+          <input name="sname" type="text" placeholder="Store Name" required>
         </div>
 
          <div>
@@ -162,7 +163,7 @@ if (isset($_SESSION['email']) && $_SESSION['email'] != "") {
   <div class="form-info" style="margin-top: 2em;">
     <div class="part1">
       <div class="form-titles">Country of tax residence</div>
-      <select name="country" id="">
+      <select name="country" id="" required>
         <option value="">Select a Country</option>
         <option value="USA">USA</option>
         <option value="NIGERIA">NIGERIA</option>
@@ -210,24 +211,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 
-    // Check if the email already exists in the database
+$email = $_SESSION['email'];
+
+if ($email == 0) {
+  echo "<script>window.location.href = '../../../accounts/login';</script>";
+}else{
+      // Check if the email already exists in the database
     $check_sql = "SELECT * FROM store_info WHERE EMAIL = '$email'";
     $result = mysqli_query($conn, $check_sql);
 
     if (mysqli_num_rows($result) > 0) {
+      echo "<script>alert('Your store is now registered';</script>";
       echo "<script>window.location.href = '../create';</script>";
   } else {
 
   }
 
+}
 
 
-
-?>
-
-
-
-<?php
 
 
 ?>

@@ -18,29 +18,25 @@
       <h2 class="store-title"><br>
         <img src="../../home/assets/img/logo.png" width="50px" alt=""><p><br>My New Store</p> 
       </h2><br>
-      <ul class="menu">
-        <li class="menu-item active">
-          <i class="fa-solid fa-house"></i> Dashboard
-        </li>
+      <ul class="menu"><a href="../dashboard" style="text-decoration: none;">
         <li class="menu-item">
-          <i class="fa-solid fa-list"></i> Catalogs
-        </li>
+          <i class="fa-solid fa-house"></i> Dashboard
+        </li></a><a href="#" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-wallet"></i> Wallet
-        </li>
-        <li class="menu-item">
+        </li></a><a href="" style="text-decoration: none;">
+        <li class="menu-item active">
           <i class="fa-solid fa-box"></i> Orders
-        </li>
+        </li></a><a href="../my-products" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-boxes-stacked"></i> My Products
-        </li>
+        </li></a><a href="../store-settings" style="text-decoration: none;">
         <li class="menu-item">
           <i class="fa-solid fa-gear"></i> Store Settings
-        </li>
+        </li></a>
       </ul>
       <div class="account">
-        <p><i class="fa-solid fa-user"></i> Account</p>
-        <p class="mailer">orderimtees@gmail.com</p>
+        
       </div>
     </aside>
 
@@ -59,7 +55,7 @@
             <h2>Orders</h2>
             <div class="orders-actions-unique">
               <button class="csv-button-unique">CSV Import/Export <i class="fas fa-caret-down"></i></button>
-              <button class="create-order-button-unique">Create order <i class="fas fa-caret-down"></i></button>
+              <a href="create/"><button class="create-order-button-unique">Create order <i class="fas fa-caret-down"></i></button></a>
             </div>
           </div>
           <div class="orders-settings-unique">

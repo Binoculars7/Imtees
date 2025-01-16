@@ -87,7 +87,7 @@ if (isset($_POST['submit'])) {
         if (password_verify($password, $user['PASS'])) {
             echo "<div style='color:blue; font-size:14px;'>Login successful. Welcome, " . $user['FNAME'] . "!</div>";
             // Redirect to dashboard or home page
-            // header("Location: dashboard.php");
+            header("Location: ../../home/shops/");
             $_SESSION['email'] = $email;
         } else {
             echo "<div style='color:red; font-size:14px;'>Incorrect password.</div>";
