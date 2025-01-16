@@ -38,7 +38,7 @@ if ($email == 0) {
             <p>Intros choice gives you the lowest prices and best quality for hassle-free fulfillment – everytime.</p>
             <div class="price-button-container">
                 <span class="price">USD 20.09</span>
-                <button>Start Design</button>
+                <a href="../new-product"><button>Start Design</button></a>
             </div>
         </div>
     </div>

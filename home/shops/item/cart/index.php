@@ -2,7 +2,13 @@
 include "../../config.php";
 session_start();
 
-$order_id = $_SESSION['order_id'];
+if (isset($_SESSION['order_id'])) {
+    $order_id = $_SESSION['order_id'];
+}else{
+    $order_id = "";
+}
+
+
 
 // Fetch data from the database
 $sql = "SELECT `ID`, `NAME`, `SIZE`, `QTY`, `PRODUCT_ID`, `ORDER_ID`, `PRICE`, `IMAGE_URL` 
@@ -50,9 +56,21 @@ $total = 0;
                         $item_total = $price * $qty;
                         $total += $item_total;
 
-                        echo "
+                        if ($name == 'White') {
+                            echo "
                             <tr>
-                                <td><img src='../images/".$image_url."' alt='$name' class='product-image'></td>
+                                <td><img src='../../images/".$image_url."' alt='$name' class='product-image'></td>
+                                <td><div style='background:".$name."; border:1px solid black; padding:1em 0.1em; border-radius:50%; width:30px; text-align:center; margin:auto; opacity:0.7;'></div></td>
+                                <td>$size</td>
+                                <td>$qty</td>
+                                <td>$$price</td>
+                                <td>$$item_total</td>
+                            </tr>
+                        ";
+                        }else{
+                             echo "
+                            <tr>
+                                <td><img src='../../images/".$image_url."' alt='$name' class='product-image'></td>
                                 <td><div style='background:".$name."; padding:1em 0.1em; border-radius:50%; width:30px; text-align:center; margin:auto; opacity:0.7;'></div></td>
                                 <td>$size</td>
                                 <td>$qty</td>
@@ -60,6 +78,9 @@ $total = 0;
                                 <td>$$item_total</td>
                             </tr>
                         ";
+                        }
+
+                       
                     }
                 } else {
                     echo "
@@ -74,7 +95,7 @@ $total = 0;
 
         <!-- Total Section -->
         <div class="total-section">
-            <h2>Total: $<?php echo number_format($total, 2); ?></h2>
+            <h2 class="payable_amount">Total: $<?php echo number_format($total, 2); ?></h2>
             <button class="payment-button" onclick="makePayment()">Make Payment</button>
         </div>
     </div>
